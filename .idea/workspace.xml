@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/about-us.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact-us.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/our-services.html" afterDir="false" />
+    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/staticfiles/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/Car-Logo-Designs.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/img/depositphotos_124010534-stock-illustration-car-logo-auto-symbol-and.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/services.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/auto-service.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/car-index.png.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/compact-car-icon-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/default-profile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/iAutoService.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about-us.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/login_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/profile_create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/add-album.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/album-details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact-us.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delete-album.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit-album.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home-no-profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/our-services.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile-delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile-details.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/SoftUni_exercise/python_web/python_web_basics/cars_universe/templates/accounts"
+    "last_opened_file_path": "D:/SoftUni_exercise/python_web/python_web_basics/cars_universe/cars_universe"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -62,18 +68,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates\accounts" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\images" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\style" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\img" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe\templates" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates\accounts" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\images" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles" />
     </key>
   </component>
   <component name="RunManager">
@@ -113,8 +119,16 @@
       <workItem from="1667835044224" duration="616000" />
       <workItem from="1667897739935" duration="936000" />
       <workItem from="1667900544786" duration="13887000" />
-      <workItem from="1668001274154" duration="16245000" />
+      <workItem from="1668001274154" duration="23354000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1668114448060</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668114448060</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,5 +144,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
