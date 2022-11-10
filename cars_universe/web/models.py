@@ -41,7 +41,7 @@ class Car(models.Model):
         unique_together = ('user', 'name')
 
 
-class CarPhoto(models.Model):
+class Photo(models.Model):
     photo = models.ImageField(
         validators=(
             #validate_file_max_size(5),
@@ -65,3 +65,35 @@ class CarPhoto(models.Model):
         UserModel,
         on_delete=models.CASCADE,
     )
+
+
+class Event(models.Model):
+    AUDI = "Audi"
+    BMW = "Bmw"
+    VW = "Vw"
+    OPEL = "Opel"
+    FORD = "Ford"
+    OTHER = "Other"
+    TYPES = [(x, x) for x in (AUDI, BMW, VW, OPEL, FORD, OTHER)]
+    name = models.CharField(
+        max_length=30,
+    )
+
+    cars_brand = models.CharField(
+        max_length=max(len(x) for (x, _) in TYPES),
+        choices=TYPES,
+    )
+
+    address = models.CharField(max_length=40,)
+
+    date = models.DateTimeField()
+
+    car = models.OneToOneField(
+        Car,
+        on_delete=models.CASCADE,
+        primary_key=True,
+    )
+
+
+class Tool(models.Model):
+    pass

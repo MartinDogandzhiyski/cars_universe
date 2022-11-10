@@ -21,5 +21,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('cars_universe.web.urls')),
-    path('', include('cars_universe.accounts.urls')),
+    path('accounts/', include('cars_universe.accounts.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

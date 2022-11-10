@@ -1,40 +1,54 @@
 {% extends 'base.html' %}
 {% block page_content %}
-    <section id="catalogPage">
 
-        <!--  If No albums in catalog -->
-        {% if not albums %}
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p>No Albums in Catalog!</p>
-            <p>No Albums in Catalog!</p>
-            <p>No Albums in Catalog!</p>
-            <p>asfasfasfasf</p>
-        {% else %}
-            <p> </p>
+    <!-- If there are pet photos -->
+    {% if events %}
+        <div class="jumbotron">
 
-            <h1>All Albums</h1>
-            {% for album in albums %}
-                <!-- First Card-Box in catalog -->
-                <div class="card-box">
-                    <img src="{{ album.image }}" alt="Cover Image">
-                    <div>
-                        <div class="text-center">
-                            <p class="name">Name: {{ album.album_name}}</p>
-                            <p class="artist">Artist: {{ album.artist }}</p>
-                            <p class="genre">Genre: {{ album.genre }}</p>
-                            <p class="price">Price: ${{ album.price }}</p>
-                        </div>
-                        <div class="btn-group">
-                            <a href="{% url 'details album' album.pk %}">Details</a>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        {% endif %}
+            <img src="https://www.newyorkbyrail.com/wp-content/uploads/2018/02/NY-International-Auto-Show-2.jpg"
+                 class="rounded mx-auto d-block" alt="...">
+            <div class="position-sticky">
+                <figure class="text-center">
+                    <blockquote class="blockquote">
+                        <h1 class="display-11">All Events</h1>
+                    </blockquote>
+                </figure>
+            </div>
+        </div>
 
-    </section>
+        <div class="card ml-3 mb-3" style="width: 18rem;">
+            <!-- Image -->
+            <img src="f"
+                 class="card-img-top" alt="Photo description">
+            <div class="card-body">
+                {% for car in car_photo.tagged_cars.all %}
+                    <!-- Info for each pet on the photo -->
+                    <h5 class="card-title">f</h5>
+                {% endfor %}
+                <!-- First 30 chars from the description -->
+                <p class="card-text">f</p>
+                <!-- Button to the Photo Details Page -->
+                <a href="#" class="btn btn-primary">See details</a>
+            </div>
+        </div>
+
+    {% else %}
+
+
+
+        <div class="jumbotron">
+
+
+        <div class="position-sticky">
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <h1 class="display-11">No Events yet</h1>
+                </blockquote>
+            </figure>
+        </div>
+</div>
+
+    {% endif %}
+
+
 {% endblock %}

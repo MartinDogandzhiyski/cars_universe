@@ -67,7 +67,7 @@ class Profile(models.Model):
 
     date_of_birth = models.DateField(
         null=True,
-        blank=True
+        blank=True,
     )
 
     description = models.TextField(

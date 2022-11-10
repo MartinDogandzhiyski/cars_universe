@@ -2,7 +2,7 @@ from django.views import generic as views
 from django.shortcuts import render, redirect
 
 from cars_universe.common.views_mixins import RedirectToDashboard
-from cars_universe.web.models import CarPhoto
+from cars_universe.web.models import Photo
 
 
 class HomeView(views.TemplateView):
@@ -15,7 +15,7 @@ class HomeView(views.TemplateView):
 
 
 class DashboardView(views.ListView):
-    model = CarPhoto
+    model = Photo
     template_name = 'dashboard.html'
 
 

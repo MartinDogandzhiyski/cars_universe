@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="" />
+    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/about-us.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contact-us.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/our-services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/images/auto-service.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/images/car-index.png.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/images/compact-car-icon-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/images/default-profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/images/iAutoService.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,10 +33,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2HE0ZbDBYrKPWhMzgFiedMsRO9x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,6 +50,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/SoftUni_exercise/python_web/python_web_basics/cars_universe/templates/accounts"
   },
@@ -46,9 +69,11 @@
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\style" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates\accounts" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\images" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
     </key>
   </component>
   <component name="RunManager">
@@ -88,11 +113,22 @@
       <workItem from="1667835044224" duration="616000" />
       <workItem from="1667897739935" duration="936000" />
       <workItem from="1667900544786" duration="13887000" />
-      <workItem from="1668001274154" duration="9463000" />
+      <workItem from="1668001274154" duration="16245000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
