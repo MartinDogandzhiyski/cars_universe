@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block page_content %}
+    <div class="jumbotron">
+
+        <img src="https://files.porsche.com/filestore/image/multimedia/none/porscheservice-homepagebanner/normal/f59620c8-c993-11e5-8bd4-0019999cd470;sE;twebp/porsche-normal.webp" class="rounded mx-auto d-block" alt="...">
+        <div class="position-sticky">
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <h1 class="display-11">Welcome to Cars Universe</h1>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    -The best car service is expecting you! <cite title="Source Title">PitStop Service</cite>
+                </figcaption>
+                <figcaption class="blockquote-footer">
+                    -Everything for your car in our shop! <cite title="Source Title">PitStop Shop</cite>
+                </figcaption>
+            </figure>
+            <p class="lead">Log in or create your account to use our discounts!</p>
+            <hr class="my-4">
+            <div class="flex-row">
+
+                <!-- Login Button -->
+                <a href="{% url 'login user' %}" class="btn btn-secondary btn-lg">Login</a>
+
+                <!-- Register Button -->
+                <a href="{% url 'create profile' %}" class="btn btn-primary btn-lg">Register</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
