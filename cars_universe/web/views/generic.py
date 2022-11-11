@@ -14,7 +14,7 @@ class HomeView(views.TemplateView):
 
 class DashboardView(views.ListView):
     model = Photo
-    template_name = 'index.html'
+    template_name = 'home_no_profile.html'
 
 
 #class DashboardView(views.ListView):

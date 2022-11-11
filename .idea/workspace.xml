@@ -2,9 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/css/flex-slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/css/fontawesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/css/owl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/css/templatemo-sixteen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/Flaticon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/flexslider-icon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/flexslider-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/flexslider-icon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/flexslider-icon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/slick.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/slick.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/slick.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/fonts/slick.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/about-heading.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/client-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/contact-heading.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/feature-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/more-info.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/product_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/product_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/product_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/product_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/product_05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/product_06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/products-heading.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/services-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/slide_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/slide_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/slide_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/team_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/team_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/team_03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/team_04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/team_05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/team_06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/js/accordions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/js/isotope.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/js/owl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/js/slick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/jquery/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/jquery/jquery.slim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/jquery/jquery.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/vendor/jquery/jquery.slim.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/accounts/change_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/accounts/login_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/accounts/profile_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home_no_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/prepros-6.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/img/Car-Logo-Designs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/img/depositphotos_124010534-stock-illustration-car-logo-auto-symbol-and.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/style/catalog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/style/create.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/style/details.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/style/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/style/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/style/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/style/typography.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/services.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +99,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -31,35 +116,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/SoftUni_exercise/python_web/python_web_basics/cars_universe/cars_universe&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/SoftUni_exercise/python_web/python_web_basics/cars_universe/templates/accounts"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates\accounts" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\images" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\style" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\assets\images" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe\web" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\js" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\img" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\mediafiles" />
     </key>
   </component>
   <component name="RunManager">
@@ -100,7 +185,7 @@
       <workItem from="1667897739935" duration="936000" />
       <workItem from="1667900544786" duration="13887000" />
       <workItem from="1668001274154" duration="23354000" />
-      <workItem from="1668183211505" duration="2774000" />
+      <workItem from="1668183211505" duration="12720000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -109,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668114448060</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1668187388819</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668187388819</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
