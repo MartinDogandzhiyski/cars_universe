@@ -4,7 +4,7 @@ from cars_universe.web.models import Photo
 
 
 class HomeView(views.TemplateView):
-    template_name = 'home-no-profile.html'
+    template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

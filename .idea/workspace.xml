@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/staticfiles/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/img/Car-Logo-Designs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/img/depositphotos_124010534-stock-illustration-car-logo-auto-symbol-and.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about-us.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/login_page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/profile_create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/add-album.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/album-details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact-us.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/delete-album.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/edit-album.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home-no-profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/our-services.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile-delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile-details.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,21 +31,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/SoftUni_exercise/python_web/python_web_basics/cars_universe/cars_universe"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/SoftUni_exercise/python_web/python_web_basics/cars_universe/cars_universe&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
@@ -75,11 +55,11 @@
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\style" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\js" />
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\img" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe\templates" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles" />
     </key>
   </component>
   <component name="RunManager">
@@ -120,6 +100,7 @@
       <workItem from="1667897739935" duration="936000" />
       <workItem from="1667900544786" duration="13887000" />
       <workItem from="1668001274154" duration="23354000" />
+      <workItem from="1668183211505" duration="2774000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
