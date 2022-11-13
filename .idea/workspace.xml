@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update" />
+    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home_no_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_no_profile.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +16,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -34,7 +39,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/SoftUni_exercise/python_web/python_web_basics/cars_universe/templates/accounts"
+    "last_opened_file_path": "D:/SoftUni_exercise/python_web/python_web_basics/cars_universe/staticfiles/assets/images",
+    "list.type.of.created.stylesheet": "CSS"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -44,11 +50,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\assets\images" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates\accounts" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\images" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\assets\images" />
@@ -97,6 +103,7 @@
       <workItem from="1667900544786" duration="13887000" />
       <workItem from="1668001274154" duration="23354000" />
       <workItem from="1668183211505" duration="13003000" />
+      <workItem from="1668367370742" duration="2343000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -119,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668198822590</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1668367404079</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668367404079</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

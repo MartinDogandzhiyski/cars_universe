@@ -1,0 +1,15 @@
+.font{
+   	color: #f33f3f;
+	font-size: 22px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 50px;
+    padding: 20px;
+}
+
+.font2{
+    color: #fff;
+	font-size: 62px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
