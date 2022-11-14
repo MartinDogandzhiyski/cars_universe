@@ -1,7 +1,8 @@
 from django.core.exceptions import ValidationError
+from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator
 from django.db import models
-from django.contrib.auth import models as auth_models
+from django.contrib.auth import models as auth_models, get_user_model
 from cars_universe.accounts.managers import CarsUniverseUserManager
 
 '''
@@ -16,6 +17,8 @@ from cars_universe.accounts.managers import CarsUniverseUserManager
   #  megabyte_limit = 5.0
    # if filesize > megabyte_limit * 1024 * 1024:
     #    raise ValidationError("Max file size is %sMB" % str(megabyte_limit))
+
+
 
 
 class CarsUniverseUser(auth_models.AbstractUser, auth_models.PermissionsMixin):

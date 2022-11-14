@@ -1,6 +1,6 @@
 from django.views import generic as views
 
-from cars_universe.web.models import Photo
+from cars_universe.web.models import CarPhoto
 
 
 class HomeView(views.TemplateView):
@@ -13,7 +13,7 @@ class HomeView(views.TemplateView):
 
 
 class DashboardView(views.ListView):
-    model = Photo
+    model = CarPhoto
     template_name = 'index.html'
 
 

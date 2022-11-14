@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth import forms as auth_forms, get_user_model
 from cars_universe.accounts.models import Profile
 from cars_universe.helpers import BootstrapFormMixin
+from cars_universe.web.models import CarPhoto
 
 
 class CreateProfileForm(BootstrapFormMixin, auth_forms.UserCreationForm):
@@ -72,3 +73,61 @@ class CreateProfileForm(BootstrapFormMixin, auth_forms.UserCreationForm):
                 }
             ),
         }
+
+class EditProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = '__all__'
+        widgets = {
+            'first_name': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Enter first name',
+                }
+            ),
+            'last_name': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Enter last name',
+                }
+            ),
+            'picture': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Enter URL',
+                }
+            ),
+            'date_of_birth': forms.DateInput(
+                attrs={
+                    'class': 'form-control',
+                    'min': '1920-01-01'
+                }
+            ),
+
+            'email': forms.EmailInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Enter email',
+                }
+            ),
+            'description': forms.Textarea(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Enter description',
+                    'rows': 3
+                }
+            ),
+
+        }
+
+
+class DeleteProfileForm(forms.ModelForm):
+    def save(self, commit=True):
+        cars = list(self.instance.car_set.all())
+        CarPhoto.objects.all().delete()
+        self.instance.delete()
+        return self.instance
+
+    class Meta:
+        model = Profile
+        fields = ()

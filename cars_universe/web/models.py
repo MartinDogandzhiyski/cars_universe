@@ -41,7 +41,7 @@ class Car(models.Model):
         unique_together = ('user', 'name')
 
 
-class Photo(models.Model):
+class CarPhoto(models.Model):
     photo = models.ImageField(
         validators=(
             #validate_file_max_size(5),

@@ -38,6 +38,8 @@ INSTALLED_APPS = [
 
     'cars_universe.web',
     'cars_universe.accounts',
+
+
 ]
 
 MIDDLEWARE = [
