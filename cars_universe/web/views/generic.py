@@ -4,7 +4,7 @@ from cars_universe.web.models import Photo
 
 
 class HomeView(views.TemplateView):
-    template_name = 'index.html'
+    template_name = 'home_no_profile.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -14,7 +14,7 @@ class HomeView(views.TemplateView):
 
 class DashboardView(views.ListView):
     model = Photo
-    template_name = 'home_no_profile.html'
+    template_name = 'index.html'
 
 
 #class DashboardView(views.ListView):

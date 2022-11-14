@@ -11,12 +11,12 @@ from cars_universe.common.views_mixins import RedirectToDashboard
 class UserRegisterView(RedirectToDashboard, views.CreateView):
     form_class = CreateProfileForm
     template_name = 'accounts/profile_create.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('dashboard')
 
 
 class UserLoginView(auth_views.LoginView):
     template_name = 'accounts/login_page.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('dashboard')
 
     def get_success_url(self):
         if self.success_url:
