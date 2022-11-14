@@ -123,7 +123,6 @@ class EditProfileForm(forms.ModelForm):
 
 class DeleteProfileForm(forms.ModelForm):
     def save(self, commit=True):
-        cars = list(self.instance.car_set.all())
         CarPhoto.objects.all().delete()
         self.instance.delete()
         return self.instance

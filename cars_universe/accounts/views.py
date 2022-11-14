@@ -2,14 +2,14 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.contrib.auth import views as auth_views
 
-from cars_universe.accounts.forms import CreateProfileForm
+from cars_universe.accounts.forms import CreateProfileForm, EditProfileForm, DeleteProfileForm
 from cars_universe.accounts.models import Profile
 from django.views import generic as views
 from cars_universe.common.views_mixins import RedirectToDashboard
 from cars_universe.web.models import Car, CarPhoto
 
 
-class UserRegisterView(RedirectToDashboard, views.CreateView):
+class UserRegisterView(views.CreateView):
     form_class = CreateProfileForm
     template_name = 'accounts/profile_create.html'
     success_url = reverse_lazy('dashboard')
@@ -51,3 +51,33 @@ class ProfileDetailsView(views.DetailView):
         })
 
         return context
+
+
+def edit_profile(request, pk):
+    profile = Profile.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('home_pg')
+    else:
+        form = EditProfileForm(instance=profile)
+    context = {
+        'form': form
+    }
+    return render(request, 'accounts/profile_edit.html', context)
+
+
+def delete_profile(request, pk):
+    profile = Profile.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = DeleteProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('home_pg')
+    else:
+        form = DeleteProfileForm(instance=profile)
+    context = {
+        'form': form
+    }
+    return render(request, 'accounts/profile_delete.html', context)
