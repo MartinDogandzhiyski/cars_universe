@@ -25,6 +25,7 @@
     -->
 
     <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/templatemo-sixteen.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
@@ -73,6 +74,17 @@
         </div>
     </nav>
 </header>
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{% static 'assets/images/login_img.jpg' %}" alt="First slide" height="530">
+            <div class="carousel-caption d-none d-md-block font">
+                <h3>Create</h3>
+                <hr></hr>
+                <p class="font2">new profile</p>
+            </div>
+        </div>
 
 <!-- Page Content -->
 <div class="page-heading contact-heading header-text">
@@ -142,6 +154,8 @@
             </script>
 
         </div>
+    </div>
+</div>
     </div>
 </div>
 </body>

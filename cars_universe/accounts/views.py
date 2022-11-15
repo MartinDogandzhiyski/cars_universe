@@ -12,7 +12,8 @@ from cars_universe.web.models import Car, CarPhoto
 class UserRegisterView(views.CreateView):
     form_class = CreateProfileForm
     template_name = 'accounts/profile_create.html'
-    success_url = reverse_lazy('dashboard')
+    success_url = reverse_lazy('login user')
+
 
 
 class UserLoginView(auth_views.LoginView):
