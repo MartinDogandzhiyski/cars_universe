@@ -2,7 +2,7 @@ from django import forms
 
 from cars_universe.accounts.models import Profile
 from cars_universe.helpers import BootstrapFormMixin, DisabledFieldsFormMixin
-from cars_universe.web.models import CarPhoto, Car, Event
+from cars_universe.web.models.models import CarPhoto, Car, Event
 
 
 class CreateCarForm(BootstrapFormMixin, forms.ModelForm):
@@ -57,43 +57,10 @@ class DeleteCarForm(BootstrapFormMixin, DisabledFieldsFormMixin, forms.ModelForm
         exclude = ('user_profile',)
 
 
-class CreateCarPhotoForm(BootstrapFormMixin, forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self._init_bootstrap_form_controls()
-
-    photo = forms.FileField(required=False)
-
-    class Meta:
-        model = CarPhoto
-        fields = ('photo', 'description', 'tagged_cars')
-        widgets = {
-            'photo': forms.FileInput(
-                attrs={
-                    'class': 'form-control-file',
-
-                }
-            ),
-
-            'description': forms.TextInput(
-                attrs={
-                    'placeholder': 'Enter description',
-
-                }
-            ),
-
-        }
 
 
-class EditCarPhotoForm(BootstrapFormMixin, DisabledFieldsFormMixin, forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self._init_bootstrap_form_controls()
-        self._init_disabled_fields()
 
-    class Meta:
-        model = CarPhoto
-        fields = ('photo', 'description', 'tagged_cars')
+
 
 
 class CreateEventForm(BootstrapFormMixin, forms.ModelForm):
@@ -109,7 +76,7 @@ class CreateEventForm(BootstrapFormMixin, forms.ModelForm):
         widgets = {
             'name': forms.TextInput(
                 attrs={
-                    'placeholder': 'Enter car name',
+                    'placeholder': 'Enter event name',
 
                 }
             ),
