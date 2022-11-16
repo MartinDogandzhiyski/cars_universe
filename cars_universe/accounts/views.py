@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.contrib.auth import views as auth_views
+from django.contrib.auth import views as auth_views, logout
 
 from cars_universe.accounts.forms import CreateProfileForm, EditProfileForm, DeleteProfileForm
 from cars_universe.accounts.models import Profile
 from django.views import generic as views
 from cars_universe.common.views_mixins import RedirectToDashboard
-from cars_universe.web.models import Car, CarPhoto
+from cars_universe.web.models.models import Car, CarPhoto
 
 
 class UserRegisterView(views.CreateView):
@@ -24,6 +24,14 @@ class UserLoginView(auth_views.LoginView):
         if self.success_url:
             return self.success_url
         return super().get_success_url()
+
+
+def logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        return redirect('login user')
+    return render(request, 'accounts/logout_page.html', {})
+
 
 
 class ChangeUserPasswordView(auth_views.PasswordChangeView):

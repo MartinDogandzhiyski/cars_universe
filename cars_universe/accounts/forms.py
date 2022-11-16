@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth import forms as auth_forms, get_user_model
 from cars_universe.accounts.models import Profile
 from cars_universe.helpers import BootstrapFormMixin
-from cars_universe.web.models import CarPhoto
+from cars_universe.web.models.models import CarPhoto
 
 
 class CreateProfileForm(BootstrapFormMixin, auth_forms.UserCreationForm):

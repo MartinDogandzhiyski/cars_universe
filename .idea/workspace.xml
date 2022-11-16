@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/login_img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cars_universe/web/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cars_universe/web/models/additive_models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/accounts/logout_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/event_create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/cars.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/cars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accounts/login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/login_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accounts/profile_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile_details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -61,11 +70,11 @@
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe\web\models" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\assets\images" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe\web" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\templates" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\mediafiles" />
     </key>
   </component>
   <component name="RunManager">
@@ -108,7 +117,7 @@
       <workItem from="1668001274154" duration="23354000" />
       <workItem from="1668183211505" duration="13003000" />
       <workItem from="1668367370742" duration="20899000" />
-      <workItem from="1668445282487" duration="8256000" />
+      <workItem from="1668445282487" duration="15932000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -180,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668509877400</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update">
+      <created>1668536264065</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668536264065</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from cars_universe.accounts.models import Profile
-from cars_universe.web.models import Car, CarPhoto
+from cars_universe.web.models.models import Car, CarPhoto
 
 
 @admin.register(Profile)

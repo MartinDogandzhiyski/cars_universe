@@ -1,6 +1,6 @@
 from django.views import generic as views
 
-from cars_universe.web.models import CarPhoto
+from cars_universe.web.models.models import CarPhoto
 
 
 class HomeView(views.TemplateView):
