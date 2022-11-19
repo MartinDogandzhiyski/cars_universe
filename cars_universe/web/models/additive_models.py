@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
-
+from cars_universe.web.models.models import Car
 
 UserModel = get_user_model()
 
@@ -26,4 +26,6 @@ class Event(models.Model):
     address = models.CharField(max_length=40,)
 
     date = models.DateTimeField()
+
+
 

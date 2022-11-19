@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
-from cars_universe.web.models.additive_models import Event
+
 
 UserModel = get_user_model()
 
@@ -36,9 +36,6 @@ class Car(models.Model):
         on_delete=models.CASCADE,
     )
 
-    event = models.ManyToManyField(
-        Event,
-    )
 
     def __str__(self):
         return f"The {self.name} - {self.type}"

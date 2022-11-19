@@ -74,6 +74,7 @@ class CreateProfileForm(BootstrapFormMixin, auth_forms.UserCreationForm):
             ),
         }
 
+
 class EditProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
