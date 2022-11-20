@@ -21,7 +21,7 @@ class CreateCarForm(BootstrapFormMixin, forms.ModelForm):
 
     class Meta:
         model = Car
-        fields = ('name', 'type', 'made_date')
+        fields = ('name', 'type', 'made_date', 'picture')
         widgets = {
             'name': forms.TextInput(
                 attrs={
@@ -60,10 +60,11 @@ class DeleteCarForm(BootstrapFormMixin, DisabledFieldsFormMixin, forms.ModelForm
 class CreateEventForm(forms.ModelForm):
     class Meta:
         model = Event
-        fields = ('name', 'cars_brand', 'address', 'date')
+        fields = ('name', 'cars_brand', 'picture', 'description', 'address', 'date')
         labels = {
             'name': 'Name',
             'cars_brand': 'Cars Brand',
+            'picture': 'Event photo',
             'address': 'Address',
             'date': 'Date',
         }

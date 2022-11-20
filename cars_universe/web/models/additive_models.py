@@ -18,9 +18,16 @@ class Event(models.Model):
         max_length=30,
     )
 
+    picture = models.URLField()
+
     cars_brand = models.CharField(
         max_length=max(len(x) for (x, _) in TYPES),
         choices=TYPES,
+    )
+
+    description = models.TextField(
+        null=True,
+        blank=True
     )
 
     address = models.CharField(max_length=40,)

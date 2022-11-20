@@ -24,6 +24,8 @@ class Car(models.Model):
         choices=TYPES,
     )
 
+    picture = models.URLField()
+
     made_date = models.IntegerField(
         default=2005
     )
