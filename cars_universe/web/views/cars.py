@@ -31,6 +31,9 @@ def create_event(request):
 
 
 
+
+
+
 class EditCarView(views.UpdateView):
     template_name = 'main/car_edit.html'
     form_class = EditCarForm

@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png"
+          href="https://static.vecteezy.com/system/resources/previews/005/484/215/original/super-car-logo-free-vector.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
+
+    <title>Cars universe</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!--
+
+    TemplateMo 546 Sixteen Clothing
+
+    https://templatemo.com/tm-546-sixteen-clothing
+
+    -->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-sixteen.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+</head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- Header -->
+
+<header class="">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'dashboard' %}"><h2>Cars <em>Universe</em></h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dashboard' %}">Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Our Shop</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'events' %}">Events</a>
+                        <span class="sr-only">(current)</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile details' request.user.id %}">Profile
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form method="post"></form>
+                        <a class="nav-link" href="{% url 'logout user' %}">Logout
+
+                        </a>
+                    </li>
+                    {% if request.user.is_superuser %}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{% url 'event create' %}">Add event</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<hr></hr>
+<hr></hr>
+<hr></hr>
+<hr></hr>
+<hr></hr>
+
+
+<div class="container d-flex justify-content-center align-items-center">
+
+
+
+             <div class="card">
+
+              <div class="upper">
+
+                <img src="{% static 'assets/images/slide-1.jpg' %}" height="200" width="450">
+
+              </div>
+
+              <div class="user text-center">
+
+                <div class="profile">
+
+                  <img src="{{ event.picture }}" class="rounded-circle" width="80">
+
+                </div>
+
+              </div>
+
+
+              <div class="mt-5 text-center">
+
+                <h4 class="mb-0">{{ profile.first_name }} {{ profile.last_name }}</h4>
+                <span class="text-muted d-block mb-2">{{ profile.description }}</span>
+
+                {% if is_owner %}
+                    <a href="{% url 'edit profile' request.user.id %}" class="btn btn-primary">Edit</a>
+                    <a href="{% url 'delete profile' request.user.id %}" class="btn btn-danger">Delete</a>
+                    <a href="{% url 'change password' %}" class="btn btn-danger">Change Password</a>
+                {% endif %}
+
+
+                <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+
+                  <div class="stats">
+                    <h6 class="mb-0">Cars</h6>
+                    <span>"{{ cars }}"</span>
+
+                  </div>
+
+
+                  <div class="stats">
+                    <h6 class="mb-0">Events in</h6>
+                    <span>142</span>
+
+                  </div>
+
+
+
+
+                </div>
+
+              </div>
+
+             </div>
+
+           </div>
+
+
+
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
+<!-- Additional Scripts -->
+<script src="{% static 'assets/js/custom.js' %}"></script>
+<script src="{% static 'assets/js/owl.js' %}"></script>
+<script src="{% static 'assets/js/slick.js' %}"></script>
+<script src="{% static 'assets/js/isotope.js' %}"></script>
+<script src="{% static 'assets/js/accordions.js' %}"></script>
+
+
+<script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+    function clearField(t) {                   //declaring the array outside of the
+        if (!cleared[t.id]) {                      // function makes it static and global
+            cleared[t.id] = 1;  // you could use true and false, but that's more typing
+            t.value = '';         // with more chance of typos
+            t.style.color = '#fff';
+        }
+    }
+</script>
+
+
+</body>
+
+</html>
