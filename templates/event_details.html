@@ -102,7 +102,7 @@
 
               <div class="upper">
 
-                <img src="{% static 'assets/images/slide-1.jpg' %}" height="200" width="450">
+                <img src="{{ event.picture }}" height="200" width="450">
 
               </div>
 
@@ -119,14 +119,13 @@
 
               <div class="mt-5 text-center">
 
-                <h4 class="mb-0">{{ profile.first_name }} {{ profile.last_name }}</h4>
-                <span class="text-muted d-block mb-2">{{ profile.description }}</span>
+                <h4 class="mb-0">{{ event.name }}</h4>
+                <span class="text-muted d-block mb-2">{{ event.description }}</span>
 
-                {% if is_owner %}
-                    <a href="{% url 'edit profile' request.user.id %}" class="btn btn-primary">Edit</a>
-                    <a href="{% url 'delete profile' request.user.id %}" class="btn btn-danger">Delete</a>
-                    <a href="{% url 'change password' %}" class="btn btn-danger">Change Password</a>
-                {% endif %}
+                <a href="#" class="btn btn-primary">Join</a>
+
+
+
 
 
                 <div class="d-flex justify-content-between align-items-center mt-4 px-4">
