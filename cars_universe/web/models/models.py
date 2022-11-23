@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth import get_user_model
 
 
-
 UserModel = get_user_model()
 
 
@@ -24,14 +23,15 @@ class Car(models.Model):
         choices=TYPES,
     )
 
-    picture = models.URLField()
+    photo = models.ImageField(upload_to="mediafiles/",
+                              validators=(
+                                  # validate_file_max_size(5),
+                              )
+                              )
 
     made_date = models.IntegerField(
         default=2005
     )
-    # One-to-one relations
-
-    # One-to-many relations
 
     user = models.ForeignKey(
         UserModel,

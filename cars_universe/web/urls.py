@@ -1,7 +1,8 @@
 from django.urls import path
 
-from cars_universe.web.views.cars import create_event, delete_event, edit_event
-from cars_universe.web.views.generic import HomeView, DashboardView, EventDetailsView, ShowEventsView
+from cars_universe.web.views.cars import create_event, delete_event, edit_event, CreateCarView, EditCarView, \
+    DeleteCarView
+from cars_universe.web.views.generic import HomeView, DashboardView, EventDetailsView, ShowEventsView, ShowCarsView
 
 urlpatterns = (
     path('', HomeView.as_view(), name='home_pg'),
@@ -11,5 +12,9 @@ urlpatterns = (
     path('event/delete/<int:pk>/', delete_event, name='delete event'),
     path('events/', ShowEventsView.as_view(), name='events'),
     path('event/details/<int:pk>/', EventDetailsView.as_view(), name='event details'),
+    path('car/create/', CreateCarView.as_view(), name='create car'),
+    path('cars', ShowCarsView.as_view(), name='cars'),
+    path('car/edit/<int:pk>/', EditCarView.as_view(), name='edit car'),
+    path('car/delete/<int:pk>/', DeleteCarView.as_view(), name='delete car'),
 
 )

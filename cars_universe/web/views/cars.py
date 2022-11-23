@@ -20,7 +20,6 @@ class CreateCarView(views.CreateView):
         return kwargs
 
 
-
 class EditCarView(views.UpdateView):
     template_name = 'car_edit.html'
     form_class = EditCarForm
