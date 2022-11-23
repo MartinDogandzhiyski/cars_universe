@@ -1,3 +1,7 @@
-from django.test import TestCase
+from django import test as django_test
 
-# Create your tests here.
+class ProfileDetailsViewTests(django_test.TestCase):
+    def test_correct_template(self):
+        pass
+
+    #def test_when

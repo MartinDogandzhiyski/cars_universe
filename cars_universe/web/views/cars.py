@@ -9,7 +9,7 @@ from django.views import generic as views
 from cars_universe.web.models.additive_models import Event
 
 
-class CreateCarView(auth_mixin.LoginRequiredMixin, views.CreateView):
+class CreateCarView(views.CreateView):
     template_name = 'car_create.html'
     form_class = CreateCarForm
     success_url = reverse_lazy('dashboard')
@@ -18,6 +18,17 @@ class CreateCarView(auth_mixin.LoginRequiredMixin, views.CreateView):
         kwargs = super().get_form_kwargs()
         kwargs['user'] = self.request.user
         return kwargs
+
+
+
+class EditCarView(views.UpdateView):
+    template_name = 'car_edit.html'
+    form_class = EditCarForm
+
+
+class DeleteCarView(views.DeleteView):
+    template_name = 'car_delete.html'
+    form_class = DeleteCarForm
 
 
 def create_event(request):
@@ -50,7 +61,7 @@ def edit_event(request, pk):
         'form': form,
         'event': instance,
     }
-    return render(request, 'event_delete.html', context)
+    return render(request, 'event_edit.html', context)
 
 
 def delete_event(request, pk):

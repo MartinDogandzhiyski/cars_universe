@@ -76,15 +76,10 @@ class CreateEventForm(BootstrapFormMixin, forms.ModelForm):
         }
 
 
-class EditEventForm(BootstrapFormMixin, forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self._init_bootstrap_form_controls()
-
+class EditEventForm(forms.ModelForm):
     class Meta:
-        model = Car
+        model = Event
         fields = '__all__'
-
 
 
 class DeleteEventForm(forms.ModelForm):

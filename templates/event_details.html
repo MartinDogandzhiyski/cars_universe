@@ -149,7 +149,7 @@
                             <p>{{ event.description }}</p>
                             <ul class="stars">
                                 {% if request.user.is_superuser %}
-                                    <a href="#" class="btn btn-primary">Edit</a>
+                                    <a href="{% url 'edit event' event.id %}" class="btn btn-primary">Edit</a>
                                     <a href="{% url 'delete event' event.id %}" class="btn btn-danger">Delete</a>
                                 {% endif %}
                             </ul>
