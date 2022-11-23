@@ -57,10 +57,16 @@ class DeleteCarForm(BootstrapFormMixin, DisabledFieldsFormMixin, forms.ModelForm
         exclude = ('user_profile',)
 
 
-class CreateEventForm(forms.ModelForm):
+class CreateEventForm(BootstrapFormMixin, forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._init_bootstrap_form_controls()
+
+    photo = forms.FileField(required=False)
+
     class Meta:
         model = Event
-        fields = ('name', 'cars_brand', 'picture', 'description', 'address', 'date')
+        fields = ('name', 'cars_brand', 'photo', 'description', 'address', 'date')
         labels = {
             'name': 'Name',
             'cars_brand': 'Cars Brand',

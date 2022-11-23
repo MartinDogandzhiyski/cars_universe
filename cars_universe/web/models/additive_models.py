@@ -18,11 +18,15 @@ class Event(models.Model):
         max_length=30,
     )
 
-    picture = models.URLField()
-
     cars_brand = models.CharField(
         max_length=max(len(x) for (x, _) in TYPES),
         choices=TYPES,
+    )
+
+    photo = models.ImageField(upload_to="mediafiles/",
+        validators=(
+            # validate_file_max_size(5),
+        )
     )
 
     description = models.TextField(
@@ -33,6 +37,11 @@ class Event(models.Model):
     address = models.CharField(max_length=40,)
 
     date = models.DateTimeField()
+
+
+class EventPhoto(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='media')
 
 
 

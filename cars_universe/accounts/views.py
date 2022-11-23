@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.contrib.auth import views as auth_views, logout
-
+from django.contrib.auth import mixins as auth_mixin
 from cars_universe.accounts.forms import CreateProfileForm, EditProfileForm, DeleteProfileForm
 from cars_universe.accounts.models import Profile
 from django.views import generic as views
@@ -39,7 +39,7 @@ class ChangeUserPasswordView(auth_views.PasswordChangeView):
     success_url = reverse_lazy('password-change_done')
 
 
-class ProfileDetailsView(views.DetailView):
+class ProfileDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
     model = Profile
     template_name = 'profile_details.html'
     context_object_name = 'profile'
@@ -68,7 +68,7 @@ def edit_profile(request, pk):
         form = EditProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            return redirect('home_pg')
+            return redirect('dashboard')
     else:
         form = EditProfileForm(instance=profile)
     context = {
