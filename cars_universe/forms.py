@@ -76,5 +76,32 @@ class CreateEventForm(BootstrapFormMixin, forms.ModelForm):
         }
 
 
+class EditEventForm(BootstrapFormMixin, forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._init_bootstrap_form_controls()
+
+    class Meta:
+        model = Car
+        fields = '__all__'
+
+
+
+class DeleteEventForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for _, field in self.fields.items():
+            field.widget.attrs['disabled'] = 'disabled'
+            field.required = False
+
+    def save(self, commit=True):
+        self.instance.delete()
+        return self.instance
+
+    class Meta:
+        model = Car
+        fields = ('name',)
+
+
 
 

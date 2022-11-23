@@ -128,6 +128,7 @@
     </div>
     <!-- Banner Ends Here -->
 
+
     <div class="latest-products">
         <div class="container">
             <div class="row">
@@ -138,24 +139,24 @@
                     </div>
                 </div>
 
-                    <div class="col-md-4">
-                        <div class="product-item">
-                            <a href="{% url 'event details' event.id %}"><img src="{{ event.photo.url }}" width="150" height="250" alt=""></a>
-                            <div class="down-content">
-                                <a href="#"><h4>{{ event.name }}</h4></a>
-                                <h6>{{ event.date }}</h6>
-                                <p>{{ event.description }}</p>
-                                <ul class="stars">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
-                                <span>Likes (24)</span>
-                            </div>
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <a href="{% url 'event details' event.id %}"><img src="{{ event.photo.url }}" width="150"
+                                                                          height="250" alt=""></a>
+                        <div class="down-content">
+                            <a href="#"><h4>{{ event.name }}</h4></a>
+                            <h6>{{ event.date }}</h6>
+                            <p>{{ event.description }}</p>
+                            <ul class="stars">
+                                {% if request.user.is_superuser %}
+                                    <a href="#" class="btn btn-primary">Edit</a>
+                                    <a href="{% url 'delete event' event.id %}" class="btn btn-danger">Delete</a>
+                                {% endif %}
+                            </ul>
+                            <span>Likes (24)</span>
                         </div>
                     </div>
+                </div>
 
             </div>
         </div>

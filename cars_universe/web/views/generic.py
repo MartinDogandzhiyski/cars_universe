@@ -45,3 +45,6 @@ class EventDetailsView(views.DetailView):
         context['events'] = Event.objects.all()
 
         return context
+
+
+
