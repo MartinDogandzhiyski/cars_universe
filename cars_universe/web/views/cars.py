@@ -31,7 +31,7 @@ class DeleteCarView(views.DeleteView):
 
 
 def create_event(request):
-    if request.user.is_authenticated:
+    if request.user.is_superuser:
         if request.method == 'POST':
             form = CreateEventForm(request.POST, request.FILES)
 
