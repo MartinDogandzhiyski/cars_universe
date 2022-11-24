@@ -60,7 +60,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">Our Shop</a>
+                        <a class="nav-link" href="{% url 'tools' %}">Our Shop</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'events' %}">Events</a>
@@ -106,7 +106,7 @@
 
      <div class="row">
         <div class="col-lg-12 text-center">
-            <h1>Are you sure you want to delete your profile?</h1>
+            <h1>Are you sure you want to delete the event?</h1>
             <div class="m-auto d-flex justify-content-center">
                 <div class="m-2">
                     <form method="post" action="{% url 'delete event' event.id %}">

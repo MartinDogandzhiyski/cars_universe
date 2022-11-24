@@ -61,7 +61,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">Our Shop</a>
+                        <a class="nav-link" href="{% url 'tools' %}">Our Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'events' %}">Events</a>
@@ -156,6 +156,39 @@
                                 <a href="#"><h4>{{ event.name }}</h4></a>
                                 <h6>{{ event.date }}</h6>
                                 <p>{{ event.description }}</p>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <span>Reviews (24)</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="latest-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Tools and Accessories</h2>
+                        <a href="{% url 'tools' %}">view our shop <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                {% for tool in tools %}
+                    <div class="col-md-4">
+                        <div class="product-item">
+                            <a href="{% url 'tool details' tool.id %}"><img src="{{ tool.photo.url }}" width="150" height="250" alt=""></a>
+                            <div class="down-content">
+                                <a href="#"><h4>{{ tool.name }}</h4></a>
+                                <h6>{{ tool.price }}lv</h6>
+                                <p>{{ tool.description }}</p>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>

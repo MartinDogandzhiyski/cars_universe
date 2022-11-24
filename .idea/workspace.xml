@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/cars_universe/web/views/tools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tool_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tool_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tool_details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tool_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tools.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/cars_universe_db.mGfqOQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/cars_universe_db.mGfqOQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/web/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/cars.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/cars.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tool_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tool_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tool_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tools.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tools.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +116,7 @@
       <workItem from="1668885056530" duration="1067000" />
       <workItem from="1668886141316" duration="1432000" />
       <workItem from="1668932856827" duration="26741000" />
-      <workItem from="1669287232586" duration="5978000" />
+      <workItem from="1669287232586" duration="8407000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -289,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669289126937</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update">
+      <created>1669302441261</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1669302441261</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

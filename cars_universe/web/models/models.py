@@ -78,6 +78,11 @@ class Tool(models.Model):
     TOOLS = 'TOOLS'
     TYPES = [(x, x) for x in (ACCESSORIES, TOOLS)]
 
+    type = models.CharField(
+        max_length=max(len(x) for (x, _) in TYPES),
+        choices=TYPES,
+    )
+
     name = models.CharField(
         max_length=40,
     )
