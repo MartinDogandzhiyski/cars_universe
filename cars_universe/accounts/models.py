@@ -66,7 +66,11 @@ class Profile(models.Model):
         ]
     )
 
-    picture = models.URLField()
+    picture = models.ImageField(upload_to="mediafiles/",
+                              validators=(
+                                  # validate_file_max_size(5),
+                              )
+                              )
 
     date_of_birth = models.DateField(
         null=True,

@@ -3,6 +3,7 @@ from django import forms
 from cars_universe.accounts.models import Profile
 from cars_universe.helpers import BootstrapFormMixin, DisabledFieldsFormMixin
 from cars_universe.web.models.additive_models import Car, Event
+from cars_universe.web.models.models import Tool
 
 
 class CreateCarForm(BootstrapFormMixin, forms.ModelForm):
@@ -98,7 +99,45 @@ class DeleteEventForm(forms.ModelForm):
         fields = ('name',)
 
 
+class CreateToolForm(BootstrapFormMixin, forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._init_bootstrap_form_controls()
 
+    photo = forms.FileField(required=False)
+
+    class Meta:
+        model = Tool
+        fields = ('name', 'photo', 'description', 'price')
+        labels = {
+            'name': 'Name',
+            'description': 'Description',
+            'photo': 'Tool photo',
+            'price': 'Price'
+
+        }
+
+
+class EditToolForm(forms.ModelForm):
+    class Meta:
+        model = Tool
+        fields = '__all__'
+
+
+class DeleteToolForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for _, field in self.fields.items():
+            field.widget.attrs['disabled'] = 'disabled'
+            field.required = False
+
+    def save(self, commit=True):
+        self.instance.delete()
+        return self.instance
+
+    class Meta:
+        model = Car
+        fields = ('name',)
 
 
 

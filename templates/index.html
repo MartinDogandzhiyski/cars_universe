@@ -83,7 +83,12 @@
 
                         </a>
                     </li>
-                    {% if request.user.is_superuser %}
+                    {% if request.user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{% url 'tool create' %}">Add tool</a>
+                        </li>
+                    {% endif %}
+                    {% if request.user.is_staff %}
                         <li class="nav-item">
                             <a class="nav-link " href="{% url 'event create' %}">Add event</a>
                         </li>

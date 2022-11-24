@@ -1,7 +1,7 @@
 from django.views import generic as views
 
 from cars_universe.web.models.additive_models import Event
-from cars_universe.web.models.models import CarPhoto, Car
+from cars_universe.web.models.models import CarPhoto, Car, Tool
 
 
 class HomeView(views.TemplateView):
@@ -58,3 +58,25 @@ class ShowCarsView(views.ListView):
         return context
 
 
+class ShowToolsView(views.ListView):
+    model = Tool
+    template_name = 'tools.html'
+    context_object_name = 'tools'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tools'] = Tool.objects.all()
+
+        return context
+
+
+class ToolDetailsView(views.DetailView):
+    model = Tool
+    template_name = 'tool_details.html'
+    context_object_name = 'tool'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tools'] = Tool.objects.all()
+
+        return context

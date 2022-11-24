@@ -1,3 +1,4 @@
+from django.core.validators import MinValueValidator
 from django.db import models
 from django.contrib.auth import get_user_model
 
@@ -47,11 +48,11 @@ class Car(models.Model):
 
 
 class CarPhoto(models.Model):
-    photo = models.ImageField(
-        validators=(
-            #validate_file_max_size(5),
-        )
-    )
+    photo = models.ImageField(upload_to="mediafiles/",
+                              validators=(
+                                  # validate_file_max_size(5),
+                              )
+                              )
 
     description = models.TextField(
         null=True,
@@ -72,6 +73,27 @@ class CarPhoto(models.Model):
     )
 
 
-
 class Tool(models.Model):
-    pass
+    ACCESSORIES = 'ACCESSORIES'
+    TOOLS = 'TOOLS'
+    TYPES = [(x, x) for x in (ACCESSORIES, TOOLS)]
+
+    name = models.CharField(
+        max_length=40,
+    )
+
+    photo = models.ImageField(upload_to="mediafiles/",
+                              validators=(
+                                  # validate_file_max_size(5),
+                              )
+                              )
+
+    description = models.TextField(
+        null=True,
+        blank=True,
+    )
+
+    price = models.IntegerField(
+        validators=[MinValueValidator(1)],
+    )
+

@@ -31,7 +31,7 @@ class DeleteCarView(views.DeleteView):
 
 
 def create_event(request):
-    if request.user.is_superuser:
+    if request.user.is_staff:
         if request.method == 'POST':
             form = CreateEventForm(request.POST, request.FILES)
 
@@ -47,34 +47,35 @@ def create_event(request):
 
 
 def edit_event(request, pk):
-    instance = Event.objects.get(pk=pk)
-    if request.method == 'POST':
-        form = EditEventForm(request.POST, instance=instance)
-        if form.is_valid():
-            form.save()
-            return redirect('dashboard')
-    else:
-        form = EditEventForm(instance=instance)
+    if request.user.is_staff:
+        instance = Event.objects.get(pk=pk)
+        if request.method == 'POST':
+            form = EditEventForm(request.POST, instance=instance)
+            if form.is_valid():
+                form.save()
+                return redirect('dashboard')
+        else:
+            form = EditEventForm(instance=instance)
 
-    context = {
-        'form': form,
-        'event': instance,
-    }
-    return render(request, 'event_edit.html', context)
+        context = {
+            'form': form,
+            'event': instance,
+        }
+        return render(request, 'event_edit.html', context)
 
 
 def delete_event(request, pk):
-    event = Event.objects.get(pk=pk)
-    if request.method == 'POST':
-        form = DeleteEventForm(request.POST, instance=event)
-        if form.is_valid():
-            form.save()
-            return redirect('events')
-    else:
-        form = DeleteEventForm(instance=event)
-    context = {
-        'form': form,
-        'event': event,
-    }
-    return render(request, 'event_delete.html', context)
-
+    if request.user.is_staff:
+        event = Event.objects.get(pk=pk)
+        if request.method == 'POST':
+            form = DeleteEventForm(request.POST, instance=event)
+            if form.is_valid():
+                form.save()
+                return redirect('events')
+        else:
+            form = DeleteEventForm(instance=event)
+        context = {
+            'form': form,
+            'event': event,
+        }
+        return render(request, 'event_delete.html', context)
