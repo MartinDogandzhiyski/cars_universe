@@ -1,12 +1,51 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.contrib.auth import views as auth_views, logout
+from django.contrib.auth import views as auth_views, logout, get_user_model
 from django.contrib.auth import mixins as auth_mixin
 from cars_universe.accounts.forms import CreateProfileForm, EditProfileForm, DeleteProfileForm
 from cars_universe.accounts.models import Profile
 from django.views import generic as views
+from rest_framework import serializers
+from django.contrib.auth import password_validation as validators
+from django.core import exceptions
+from rest_framework.authtoken import views as authtoken_views
+from rest_framework.authtoken import models as authtoken_models
 from cars_universe.common.views_mixins import RedirectToDashboard
 from cars_universe.web.models.models import Car, CarPhoto
+from rest_framework import generics as rest_views
+
+UserModel = get_user_model()
+
+
+class CreateUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserModel
+        fields = ('username', 'password')
+
+    def create(self, validated_data):
+        user = super().create(validated_data)
+
+        user.set_password(user.set_password)
+        user.save()
+        return user
+
+    def validate(self, data):
+        # Invoke password validators
+        user = UserModel(**data)
+        password = data.get('password')
+        errors = {}
+        try:
+            validators.validate_password(password, user)
+        except exceptions.ValidationError as e:
+            errors['password'] = list(e.messages)
+        if errors:
+            raise serializers.ValidationError(errors)
+        return super().validate(data)
+
+    def to_representation(self, instance):
+        user_representation = super().to_representation(instance)
+        user_representation.pop('password')
+        return user_representation
 
 
 class UserRegisterView(views.CreateView):
