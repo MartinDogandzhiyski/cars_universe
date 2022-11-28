@@ -108,10 +108,11 @@ class CreateToolForm(BootstrapFormMixin, forms.ModelForm):
 
     class Meta:
         model = Tool
-        fields = ('name', 'type', 'photo', 'description', 'price')
+        fields = ('name', 'type', 'brand', 'photo', 'description', 'price')
         labels = {
             'name': 'Name',
             'type': 'Type',
+            'brand': 'Brand',
             'description': 'Description',
             'photo': 'Tool photo',
             'price': 'Price'

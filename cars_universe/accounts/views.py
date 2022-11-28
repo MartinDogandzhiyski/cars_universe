@@ -8,6 +8,8 @@ from django.views import generic as views
 from rest_framework import serializers
 from django.contrib.auth import password_validation as validators
 from django.core import exceptions
+from rest_framework.response import Response
+from rest_framework import generics as rest_generic_views, views as rest_views
 from rest_framework.authtoken import views as authtoken_views
 from rest_framework.authtoken import models as authtoken_models
 from cars_universe.common.views_mixins import RedirectToDashboard
@@ -46,6 +48,18 @@ class CreateUserSerializer(serializers.ModelSerializer):
         user_representation = super().to_representation(instance)
         user_representation.pop('password')
         return user_representation
+
+
+class RegisterApiView(rest_generic_views.CreateAPIView):
+    pass
+
+
+class LoginApiView(authtoken_views.ObtainAuthToken):
+    pass
+
+
+#class LogoutApiView(rest_views.APIView):
+ #   pass
 
 
 class UserRegisterView(views.CreateView):
