@@ -126,7 +126,7 @@
                         <div class="product-item">
                             <a href="{% url 'event details' event.id %}"><img src="{{ event.photo.url }}" width="150" height="250" alt=""></a>
                             <div class="down-content">
-                                <a href="#"><h4>{{ event.name }}</h4></a>
+                                <a href="{% url 'event details' event.id %}"><h4>{{ event.name }}</h4></a>
                                 <h6>{{ event.date }}</h6>
                                 <p>{{ event.description }}</p>
                                 <ul class="stars">

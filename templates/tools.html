@@ -134,7 +134,7 @@
                                 <a href="{% url 'tool details' tool.id %}"><img src="{{ tool.photo.url }}" width="150"
                                                                                 height="250" alt=""></a>
                                 <div class="down-content">
-                                    <a href="#"><h4>{{ tool.name }}</h4></a>
+                                    <a href="{% url 'tool details' tool.id %}"><h4>{{ tool.name }}</h4></a>
                                     <h6>{{ tool.price }} lv</h6>
                                     <p>{{ tool.description }}</p>
                                     <ul class="stars">
