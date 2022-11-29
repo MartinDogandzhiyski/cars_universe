@@ -1,7 +1,18 @@
+from django.shortcuts import render
 from django.views import generic as views
 
+from cars_universe.accounts.models import CarsUniverseUser, Profile
 from cars_universe.web.models.additive_models import Event
 from cars_universe.web.models.models import CarPhoto, Car, Tool
+
+
+def about(request):
+    profiles = Profile.objects.all()
+
+    context = {
+        'profiles': profiles,
+    }
+    return render(request, 'about.html', context)
 
 
 class HomeView(views.TemplateView):
@@ -81,3 +92,8 @@ class ToolDetailsView(views.DetailView):
         context['tools'] = Tool.objects.all()
 
         return context
+
+
+
+
+

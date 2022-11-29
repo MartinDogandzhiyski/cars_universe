@@ -62,6 +62,7 @@ def edit_event(request, pk):
             'event': instance,
         }
         return render(request, 'event_edit.html', context)
+    return redirect('error-500.html')
 
 
 def delete_event(request, pk):

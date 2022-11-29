@@ -3,7 +3,7 @@ from django.urls import path
 from cars_universe.web.views.cars import create_event, delete_event, edit_event, CreateCarView, EditCarView, \
     DeleteCarView
 from cars_universe.web.views.generic import HomeView, DashboardView, EventDetailsView, ShowEventsView, ShowCarsView, \
-    ShowToolsView, ToolDetailsView
+    ShowToolsView, ToolDetailsView, about
 from cars_universe.web.views.tools import create_tool, delete_tool, edit_tool
 
 urlpatterns = (
@@ -23,5 +23,6 @@ urlpatterns = (
     path('tool/delete/<int:pk>/', delete_tool, name='delete tool'),
     path('tools/', ShowToolsView.as_view(), name='tools'),
     path('tool/details/<int:pk>/', ToolDetailsView.as_view(), name='tool details'),
+    path('about/', about, name='about'),
 
 )

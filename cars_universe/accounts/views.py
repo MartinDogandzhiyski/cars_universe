@@ -1,11 +1,13 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.template import loader
 from django.urls import reverse_lazy
 from django.contrib.auth import views as auth_views, logout, get_user_model
 from django.contrib.auth import mixins as auth_mixin
 from cars_universe.accounts.forms import CreateProfileForm, EditProfileForm, DeleteProfileForm
 from cars_universe.accounts.models import Profile
 from django.views import generic as views
-from rest_framework import serializers
+from rest_framework import serializers, response, status
 from django.contrib.auth import password_validation as validators
 from django.core import exceptions
 from rest_framework.response import Response
@@ -60,6 +62,10 @@ class LoginApiView(authtoken_views.ObtainAuthToken):
 
 #class LogoutApiView(rest_views.APIView):
  #   pass
+
+
+
+
 
 
 class UserRegisterView(views.CreateView):
