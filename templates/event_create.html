@@ -55,9 +55,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'dashboard' %}">Home
-                            <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -65,9 +64,16 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'events' %}">Events</a>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile details' request.user.id %}">Profile
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form method="post"></form>
+                        <a class="nav-link" href="{% url 'create car' %}">Add car
 
                         </a>
                     </li>
@@ -77,16 +83,21 @@
 
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <form method="post"></form>
-                        <a class="nav-link" href="{% url 'create car' %}">Add car
-                            <span class="sr-only">(current)</span>
 
-                        </a>
-                    </li>
-                    {% if request.user.is_superuser %}
+                    {% if request.user.is_staff %}
                         <li class="nav-item">
+                            <a class="nav-link " href="{% url 'tool create' %}">Add tool</a>
+                        </li>
+                    {% endif %}
+                    {% if request.user.is_staff %}
+                        <li class="nav-item active">
                             <a class="nav-link " href="{% url 'event create' %}">Add event</a>
+                            <span class="sr-only">(current)</span>
+                        </li>
+                    {% endif %}
+                    {% if request.user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{% url 'part create' %}">Add part</a>
                         </li>
                     {% endif %}
                 </ul>

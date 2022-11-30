@@ -70,6 +70,18 @@ class ShowCarsView(views.ListView):
         return context
 
 
+class CarDetailsView(views.DetailView):
+    model = Car
+    template_name = 'car_details.html'
+    context_object_name = 'car'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['cars'] = Car.objects.all()
+
+        return context
+
+
 class ShowToolsView(views.ListView):
     model = Tool
     template_name = 'tools.html'

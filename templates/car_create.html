@@ -83,9 +83,19 @@
 
                         </a>
                     </li>
-                    {% if request.user.is_superuser %}
+                    {% if request.user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{% url 'tool create' %}">Add tool</a>
+                        </li>
+                    {% endif %}
+                    {% if request.user.is_staff %}
                         <li class="nav-item">
                             <a class="nav-link " href="{% url 'event create' %}">Add event</a>
+                        </li>
+                    {% endif %}
+                    {% if request.user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{% url 'part create' %}">Add part</a>
                         </li>
                     {% endif %}
                 </ul>
@@ -125,7 +135,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Add event</h2>
+                    <h2>Add car</h2>
                 </div>
             </div>
             <div class="col-md-8">

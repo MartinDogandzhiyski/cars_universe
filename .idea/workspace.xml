@@ -2,23 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/engine.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/car_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/part_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/part_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/part_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/parts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/parts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tool_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tool_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tool_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tools.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tools.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/cars.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/cars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error-404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error-500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -122,7 +130,7 @@
       <workItem from="1669573425479" duration="2633000" />
       <workItem from="1669650034701" duration="12130000" />
       <workItem from="1669815371238" duration="5264000" />
-      <workItem from="1669820891825" duration="3290000" />
+      <workItem from="1669820891825" duration="7567000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -341,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669820698602</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="update">
+      <created>1669828574791</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1669828574791</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

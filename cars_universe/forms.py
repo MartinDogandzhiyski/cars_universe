@@ -22,7 +22,7 @@ class CreateCarForm(BootstrapFormMixin, forms.ModelForm):
 
     class Meta:
         model = Car
-        fields = ('name', 'type', 'made_date', 'photo')
+        fields = ('name', 'type', 'hp', 'made_date', 'photo')
         widgets = {
             'name': forms.TextInput(
                 attrs={
@@ -40,14 +40,15 @@ class EditCarForm(BootstrapFormMixin, forms.ModelForm):
 
     class Meta:
         model = Car
-        exclude = ('user_profile',)
+        fields = ('name', 'type', 'hp', 'made_date', 'photo')
 
 
-class DeleteCarForm(BootstrapFormMixin, DisabledFieldsFormMixin, forms.ModelForm):
+class DeleteCarForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self._init_bootstrap_form_controls()
-        self._init_disabled_fields()
+        for _, field in self.fields.items():
+            field.widget.attrs['disabled'] = 'disabled'
+            field.required = False
 
     def save(self, commit=True):
         self.instance.delete()
@@ -55,7 +56,7 @@ class DeleteCarForm(BootstrapFormMixin, DisabledFieldsFormMixin, forms.ModelForm
 
     class Meta:
         model = Car
-        exclude = ('user_profile',)
+        fields = ('name',)
 
 
 class CreateEventForm(BootstrapFormMixin, forms.ModelForm):

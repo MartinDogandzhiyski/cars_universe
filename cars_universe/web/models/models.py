@@ -39,6 +39,8 @@ class Car(models.Model):
         on_delete=models.CASCADE,
     )
 
+    hp = models.IntegerField()
+
 
     def __str__(self):
         return f"The {self.name} - {self.type}"
@@ -106,7 +108,6 @@ class Tool(models.Model):
     price = models.IntegerField(
         validators=[MinValueValidator(1)],
     )
-
 
 
 class CarPart(models.Model):

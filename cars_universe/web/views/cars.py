@@ -7,6 +7,7 @@ from cars_universe.forms import CreateCarForm, EditCarForm, DeleteCarForm, Creat
 from django.views import generic as views
 
 from cars_universe.web.models.additive_models import Event
+from cars_universe.web.models.models import Car
 
 
 class CreateCarView(views.CreateView):
@@ -20,14 +21,39 @@ class CreateCarView(views.CreateView):
         return kwargs
 
 
-class EditCarView(views.UpdateView):
-    template_name = 'car_edit.html'
-    form_class = EditCarForm
+def edit_car(request, pk):
+    if request.user.is_staff:
+        instance = Car.objects.get(pk=pk)
+        if request.method == 'POST':
+            form = EditCarForm(request.POST, instance=instance)
+            if form.is_valid():
+                form.save()
+                return redirect('cars')
+        else:
+            form = EditCarForm(instance=instance)
+
+        context = {
+            'form': form,
+            'car': instance,
+        }
+        return render(request, 'car_edit.html', context)
 
 
-class DeleteCarView(views.DeleteView):
-    template_name = 'car_delete.html'
-    form_class = DeleteCarForm
+def delete_car(request, pk):
+    if request.user.is_staff:
+        car = Car.objects.get(pk=pk)
+        if request.method == 'POST':
+            form = DeleteCarForm(request.POST, instance=car)
+            if form.is_valid():
+                form.save()
+                return redirect('cars')
+        else:
+            form = DeleteCarForm(instance=car)
+        context = {
+            'form': form,
+            'car': car,
+        }
+        return render(request, 'car_delete.html', context)
 
 
 def create_event(request):
