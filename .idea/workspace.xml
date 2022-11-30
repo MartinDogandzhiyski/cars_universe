@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/cars_universe/web/views/car_parts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/about_ph.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/assets/images/shop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/part_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/part_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/part_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/part_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/parts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/login_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/profile_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home_no_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_no_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tool_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tools.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tools.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +130,8 @@
       <workItem from="1668932856827" duration="26741000" />
       <workItem from="1669287232586" duration="8681000" />
       <workItem from="1669573425479" duration="2633000" />
-      <workItem from="1669650034701" duration="12072000" />
+      <workItem from="1669650034701" duration="12130000" />
+      <workItem from="1669815371238" duration="4936000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -318,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669743567420</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update">
+      <created>1669744620068</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1669744620068</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

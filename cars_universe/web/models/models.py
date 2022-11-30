@@ -107,3 +107,42 @@ class Tool(models.Model):
         validators=[MinValueValidator(1)],
     )
 
+
+
+class CarPart(models.Model):
+    EnginePart = 'EnginePart'
+    OTHER = 'OTHER'
+    TYPES = [(x, x) for x in (EnginePart, OTHER)]
+
+    type = models.CharField(
+        max_length=max(len(x) for (x, _) in TYPES),
+        choices=TYPES,
+    )
+
+
+    brand = models.CharField(
+        max_length=30,
+    )
+
+    brand_for = models.CharField(
+        max_length=30,
+    )
+
+    name = models.CharField(
+        max_length=40,
+    )
+
+    photo = models.ImageField(upload_to="mediafiles/",
+                              validators=(
+                                  # validate_file_max_size(5),
+                              )
+                              )
+
+    description = models.TextField(
+        null=True,
+        blank=True,
+    )
+
+    price = models.IntegerField(
+        validators=[MinValueValidator(1)],
+    )

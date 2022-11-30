@@ -48,7 +48,7 @@
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'dashboard' %}"><h2>Cars <em>Universe</em></h2></a>
+            <a class="navbar-brand" href="{% url 'home_pg' %}"><h2>Cars <em>Universe</em></h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,30 +56,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'dashboard' %}">Home
-
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Our Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">Events</a>
-                        <span class="sr-only">(current)</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profile details' request.user.id %}">Profile
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <form method="post"></form>
-                        <a class="nav-link" href="{% url 'create car' %}">Add car
-
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <form method="post"></form>
-                        <a class="nav-link" href="{% url 'logout user' %}">Logout
+                        <a class="nav-link" href="{% url 'home_pg' %}">Home
 
                         </a>
                     </li>
@@ -88,16 +65,13 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    {% if request.user.is_staff %}
-                        <li class="nav-item">
-                            <a class="nav-link " href="{% url 'tool create' %}">Add tool</a>
-                        </li>
-                    {% endif %}
-                    {% if request.user.is_staff %}
-                        <li class="nav-item">
-                            <a class="nav-link " href="{% url 'event create' %}">Add event</a>
-                        </li>
-                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login user' %}">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create profile' %}">Register</a>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -140,24 +114,16 @@
             </div>
             <div class="col-md-6">
                 <div class="right-image">
-                    <img src="assets/images/feature-image.jpg" alt="">
+                    <img src="{% static 'assets/images/about_ph.jpg' %}" alt="">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="left-content">
                     <h4>Who we are &amp; What we do?</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur
-                        similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem
-                        perferendis dicta dolorem non blanditiis ex fugiat. Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                        consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium
-                        quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis.</p>
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
+                    <p>We organise car events. Everybody is welcome to show his project car when there is event for the current brand. Also you can visit the events
+                        only to watch. Everytime there are a lot of games, races and gifts!<br><br>We also have very big shop
+                    with everything for your car (car parts, accessories, tuning parts and more).</p>
+
                 </div>
             </div>
         </div>
@@ -221,7 +187,11 @@
                     }
                 }
             </script>
-
+        </div>
+    </div>
+</div>
+    </div>
+</div>
 </body>
 
 </html>

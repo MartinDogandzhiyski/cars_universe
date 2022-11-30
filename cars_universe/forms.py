@@ -3,7 +3,7 @@ from django import forms
 from cars_universe.accounts.models import Profile
 from cars_universe.helpers import BootstrapFormMixin, DisabledFieldsFormMixin
 from cars_universe.web.models.additive_models import Car, Event
-from cars_universe.web.models.models import Tool
+from cars_universe.web.models.models import Tool, CarPart
 
 
 class CreateCarForm(BootstrapFormMixin, forms.ModelForm):
@@ -127,6 +127,50 @@ class EditToolForm(forms.ModelForm):
 
 
 class DeleteToolForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for _, field in self.fields.items():
+            field.widget.attrs['disabled'] = 'disabled'
+            field.required = False
+
+    def save(self, commit=True):
+        self.instance.delete()
+        return self.instance
+
+    class Meta:
+        model = Car
+        fields = ('name',)
+
+
+class CreatePartForm(BootstrapFormMixin, forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._init_bootstrap_form_controls()
+
+    photo = forms.FileField(required=False)
+
+    class Meta:
+        model = CarPart
+        fields = ('name', 'type', 'brand', 'brand_for', 'photo', 'description', 'price')
+        labels = {
+            'name': 'Name',
+            'type': 'Type',
+            'brand': 'Brand',
+            'brand_for': 'Brand For',
+            'description': 'Description',
+            'photo': 'Part photo',
+            'price': 'Price'
+
+        }
+
+
+class EditPartForm(forms.ModelForm):
+    class Meta:
+        model = CarPart
+        fields = '__all__'
+
+
+class DeletePartForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for _, field in self.fields.items():

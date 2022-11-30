@@ -3,7 +3,7 @@ from django.views import generic as views
 
 from cars_universe.accounts.models import CarsUniverseUser, Profile
 from cars_universe.web.models.additive_models import Event
-from cars_universe.web.models.models import CarPhoto, Car, Tool
+from cars_universe.web.models.models import CarPhoto, Car, Tool, CarPart
 
 
 def about(request):
@@ -93,6 +93,29 @@ class ToolDetailsView(views.DetailView):
 
         return context
 
+
+class ShowPartsView(views.ListView):
+    model = CarPart
+    template_name = 'parts.html'
+    context_object_name = 'parts'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['parts'] = CarPart.objects.all()
+
+        return context
+
+
+class PartDetailsView(views.DetailView):
+    model = CarPart
+    template_name = 'part_details.html'
+    context_object_name = 'part'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['parts'] = CarPart.objects.all()
+
+        return context
 
 
 
