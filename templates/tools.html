@@ -95,6 +95,11 @@
                             <a class="nav-link " href="{% url 'event create' %}">Add event</a>
                         </li>
                     {% endif %}
+                    {% if request.user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{% url 'part create' %}">Add part</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -116,6 +121,7 @@
 
 
     </div>
+
     <!-- Banner Ends Here -->
 
 <div class="best-features about-features">
@@ -135,7 +141,9 @@
                 <div class="left-content">
                     <h4>OUR SHOP</h4>
                     <p>You can see here our tools, car parts and accessories. You can visit us too!<br><br>
-                        We make orders for special parts and brands!</p>
+                        We make orders for special parts and brands!
+                    </p>
+                    <a href="{% url 'parts' %}" class="btn btn-dark">View parts</a>
 
                 </div>
             </div>
@@ -195,7 +203,7 @@
                                 <a href="{% url 'tool details' tool.id %}"><img src="{{ tool.photo.url }}" width="150"
                                                                                 height="250" alt=""></a>
                                 <div class="down-content">
-                                    <a href="#"><h4>{{ tool.name }}</h4></a>
+                                    <a href="{% url 'tool details' tool.id %}"><h4>{{ tool.name }}</h4></a>
                                     <h6>{{ tool.price }} lv</h6>
                                     <p>{{ tool.description }}</p>
                                     <ul class="stars">
@@ -214,6 +222,7 @@
             </div>
         </div>
     </div>
+
 
 
     <!-- Bootstrap core JavaScript -->
