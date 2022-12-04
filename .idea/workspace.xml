@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/templates/car_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/cars.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/cars.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/car_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/car_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/car_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/logout_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/logout_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cars.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error-404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error-500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +119,7 @@
       <workItem from="1669650034701" duration="12130000" />
       <workItem from="1669815371238" duration="5264000" />
       <workItem from="1669820891825" duration="7567000" />
+      <workItem from="1670173989010" duration="1568000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>

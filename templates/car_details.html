@@ -59,16 +59,16 @@
                         <a class="nav-link" href="{% url 'dashboard' %}">Home
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'tools' %}">Our Shop</a>
-                        <span class="sr-only">(current)</span>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'events' %}">Events</a>
 
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="{% url 'profile details' request.user.id %}">Profile
+                            <span class="sr-only">(current)</span>
 
                         </a>
                     </li>
@@ -139,7 +139,7 @@
                         <a href="{% url 'car details' car.id %}"><img src="{{ car.photo.url }}" width="150"
                                                                           height="250" alt=""></a>
                         <div class="down-content">
-                            <a href="#"><h4>{{ car.name }}</h4></a>
+                            <a href="{% url 'car details' car.id %}"><h4>{{ car.name }}</h4></a>
                             <h6>{{ car.hp }}hp</h6>
                             <p>{{ car.description }}</p>
                             <ul class="stars">
@@ -148,7 +148,7 @@
                                     <a href="{% url 'delete car' car.id %}" class="btn btn-danger">Delete</a>
                                 {% endif %}
                             </ul>
-                            <span>Brand: {{ car.brand }}</span>
+                            <span>Brand: {{ car.type }}</span>
                         </div>
                     </div>
                 </div>
