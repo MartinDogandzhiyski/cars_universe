@@ -4,9 +4,6 @@
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/logout_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/logout_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/car_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cars.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +116,7 @@
       <workItem from="1669650034701" duration="12130000" />
       <workItem from="1669815371238" duration="5264000" />
       <workItem from="1669820891825" duration="7567000" />
-      <workItem from="1670173989010" duration="1568000" />
+      <workItem from="1670173989010" duration="2267000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -345,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669828574791</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update">
+      <created>1670176456401</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1670176456401</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
