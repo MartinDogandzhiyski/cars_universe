@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
-from cars_universe.web.models.models import Car
+from cars_universe.web.models.models import Car, validate_image
 
 UserModel = get_user_model()
 
@@ -24,10 +24,13 @@ class Event(models.Model):
     )
 
     photo = models.ImageField(upload_to="mediafiles/",
-        validators=(
-            # validate_file_max_size(5),
-        )
-    )
+                              validators=(
+                                  validate_image,
+                              ),
+                              blank=True,
+                              null=True,
+                              help_text='Maximum file size allowed is 5Mb'
+                              )
 
     description = models.TextField(
         null=True,
@@ -39,9 +42,9 @@ class Event(models.Model):
     date = models.DateTimeField()
 
 
-class EventPhoto(models.Model):
-    event = models.ForeignKey(Event, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='media')
+# class EventPhoto(models.Model):
+#     event = models.ForeignKey(Event, on_delete=models.CASCADE)
+#     image = models.ImageField(upload_to='media')
 
 
 

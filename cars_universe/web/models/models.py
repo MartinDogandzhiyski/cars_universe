@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator
 from django.db import models
 from django.contrib.auth import get_user_model
@@ -5,6 +6,11 @@ from django.contrib.auth import get_user_model
 
 UserModel = get_user_model()
 
+def validate_image(fieldfile_obj):
+    filesize = fieldfile_obj.file.size
+    megabyte_limit = 5.0
+    if filesize > megabyte_limit*1024*1024:
+        raise ValidationError("Max file size is %sMB" % str(megabyte_limit))
 
 class Car(models.Model):
     AUDI = "Audi"
@@ -26,8 +32,11 @@ class Car(models.Model):
 
     photo = models.ImageField(upload_to="mediafiles/",
                               validators=(
-                                  # validate_file_max_size(5),
-                              )
+                                  validate_image,
+                              ),
+                              blank=True,
+                              null=True,
+                              help_text='Maximum file size allowed is 5Mb'
                               )
 
     made_date = models.IntegerField(
@@ -49,30 +58,30 @@ class Car(models.Model):
         unique_together = ('user', 'name')
 
 
-class CarPhoto(models.Model):
-    photo = models.ImageField(upload_to="mediafiles/",
-                              validators=(
-                                  # validate_file_max_size(5),
-                              )
-                              )
-
-    description = models.TextField(
-        null=True,
-        blank=True,
-    )
-
-    publication_date = models.DateTimeField(
-        auto_now_add=True,
-    )
-
-    likes = models.IntegerField(
-        default=0,
-    )
-
-    user = models.ForeignKey(
-        UserModel,
-        on_delete=models.CASCADE,
-    )
+# class CarPhoto(models.Model):
+#     photo = models.ImageField(upload_to="mediafiles/",
+#                               validators=(
+#                                   # validate_file_max_size(5),
+#                               )
+#                               )
+#
+#     description = models.TextField(
+#         null=True,
+#         blank=True,
+#     )
+#
+#     publication_date = models.DateTimeField(
+#         auto_now_add=True,
+#     )
+#
+#     likes = models.IntegerField(
+#         default=0,
+#     )
+#
+#     user = models.ForeignKey(
+#         UserModel,
+#         on_delete=models.CASCADE,
+#     )
 
 
 class Tool(models.Model):
@@ -96,8 +105,11 @@ class Tool(models.Model):
 
     photo = models.ImageField(upload_to="mediafiles/",
                               validators=(
-                                  # validate_file_max_size(5),
-                              )
+                                  validate_image,
+                              ),
+                              blank=True,
+                              null=True,
+                              help_text='Maximum file size allowed is 5Mb'
                               )
 
     description = models.TextField(
@@ -135,8 +147,11 @@ class CarPart(models.Model):
 
     photo = models.ImageField(upload_to="mediafiles/",
                               validators=(
-                                  # validate_file_max_size(5),
-                              )
+                                  validate_image,
+                              ),
+                              blank=True,
+                              null=True,
+                              help_text='Maximum file size allowed is 5Mb'
                               )
 
     description = models.TextField(

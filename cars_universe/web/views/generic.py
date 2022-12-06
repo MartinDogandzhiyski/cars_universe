@@ -3,7 +3,7 @@ from django.views import generic as views
 from django.contrib.auth import mixins as auth_mixin
 from cars_universe.accounts.models import CarsUniverseUser, Profile
 from cars_universe.web.models.additive_models import Event
-from cars_universe.web.models.models import CarPhoto, Car, Tool, CarPart
+from cars_universe.web.models.models import Car, Tool, CarPart
 
 
 def about(request):
@@ -25,7 +25,7 @@ class HomeView(views.TemplateView):
 
 
 class DashboardView(auth_mixin.LoginRequiredMixin, views.ListView):
-    model = CarPhoto
+    model = Event
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):

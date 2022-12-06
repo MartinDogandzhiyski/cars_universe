@@ -15,7 +15,7 @@ from rest_framework import generics as rest_generic_views, views as rest_views
 from rest_framework.authtoken import views as authtoken_views
 from rest_framework.authtoken import models as authtoken_models
 from cars_universe.common.views_mixins import RedirectToDashboard
-from cars_universe.web.models.models import Car, CarPhoto
+from cars_universe.web.models.models import Car
 from rest_framework import generics as rest_views
 
 UserModel = get_user_model()

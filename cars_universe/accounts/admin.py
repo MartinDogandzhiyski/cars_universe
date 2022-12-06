@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from cars_universe.accounts.models import Profile
-from cars_universe.web.models.models import Car, CarPhoto
+from cars_universe.web.models.models import Car
 
 
 @admin.register(Profile)
@@ -15,6 +15,4 @@ class CarAdmin(admin.ModelAdmin):
     list_display = ('name', 'type')
 
 
-@admin.register(CarPhoto)
-class CarPhotoAdmin(admin.ModelAdmin):
-    pass
+
