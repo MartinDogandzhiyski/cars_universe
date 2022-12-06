@@ -60,19 +60,14 @@ class LoginApiView(authtoken_views.ObtainAuthToken):
     pass
 
 
-#class LogoutApiView(rest_views.APIView):
- #   pass
-
-
-
-
+# class LogoutApiView(rest_views.APIView):
+#   pass
 
 
 class UserRegisterView(views.CreateView):
     form_class = CreateProfileForm
     template_name = 'accounts/profile_create.html'
     success_url = reverse_lazy('login user')
-
 
 
 class UserLoginView(auth_views.LoginView):
@@ -92,7 +87,6 @@ def logout_view(request):
     return render(request, 'accounts/logout_page.html', {})
 
 
-
 class ChangeUserPasswordView(auth_views.PasswordChangeView):
     template_name = 'accounts/change_password.html'
     success_url = reverse_lazy('password-change_done')
@@ -106,14 +100,14 @@ class ProfileDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         cars = list(Car.objects.filter(user_id=self.object.user_id))
-        #car_photos = CarPhoto.objects.filter(tagged_cars__in=cars).distinct()
+        # car_photos = CarPhoto.objects.filter(tagged_cars__in=cars).distinct()
 
-      #  total_likes_count = sum(cp.likes for cp in car_photos)
-       # total_car_photos_count = len(car_photos)
+        #  total_likes_count = sum(cp.likes for cp in car_photos)
+        # total_car_photos_count = len(car_photos)
 
         context.update({
-            #'total_likes_count': total_likes_count,
-            #'total_car_photos_count': total_car_photos_count,
+            # 'total_likes_count': total_likes_count,
+            # 'total_car_photos_count': total_car_photos_count,
             'is_owner': self.object.user_id == self.request.user.id,
             'cars': cars,
         })
@@ -122,30 +116,32 @@ class ProfileDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
 
 
 def edit_profile(request, pk):
-    profile = Profile.objects.get(pk=pk)
-    if request.method == 'POST':
-        form = EditProfileForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            return redirect('dashboard')
-    else:
-        form = EditProfileForm(instance=profile)
-    context = {
-        'form': form
-    }
-    return render(request, 'accounts/profile_edit.html', context)
+    if request.user.is_authenticated:
+        profile = Profile.objects.get(pk=pk)
+        if request.method == 'POST':
+            form = EditProfileForm(request.POST, instance=profile)
+            if form.is_valid():
+                form.save()
+                return redirect('dashboard')
+        else:
+            form = EditProfileForm(instance=profile)
+        context = {
+            'form': form
+        }
+        return render(request, 'accounts/profile_edit.html', context)
 
 
 def delete_profile(request, pk):
-    profile = Profile.objects.get(pk=pk)
-    if request.method == 'POST':
-        form = DeleteProfileForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            return redirect('home_pg')
-    else:
-        form = DeleteProfileForm(instance=profile)
-    context = {
-        'form': form
-    }
-    return render(request, 'accounts/profile_delete.html', context)
+    if request.user.is_authenticated:
+        profile = Profile.objects.get(pk=pk)
+        if request.method == 'POST':
+            form = DeleteProfileForm(request.POST, instance=profile)
+            if form.is_valid():
+                form.save()
+                return redirect('home_pg')
+        else:
+            form = DeleteProfileForm(instance=profile)
+        context = {
+            'form': form
+        }
+        return render(request, 'accounts/profile_delete.html', context)

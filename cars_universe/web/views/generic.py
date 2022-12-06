@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic as views
-
+from django.contrib.auth import mixins as auth_mixin
 from cars_universe.accounts.models import CarsUniverseUser, Profile
 from cars_universe.web.models.additive_models import Event
 from cars_universe.web.models.models import CarPhoto, Car, Tool, CarPart
@@ -24,7 +24,7 @@ class HomeView(views.TemplateView):
         return context
 
 
-class DashboardView(views.ListView):
+class DashboardView(auth_mixin.LoginRequiredMixin, views.ListView):
     model = CarPhoto
     template_name = 'index.html'
 
@@ -35,7 +35,7 @@ class DashboardView(views.ListView):
         return context
 
 
-class ShowEventsView(views.ListView):
+class ShowEventsView(auth_mixin.LoginRequiredMixin, views.ListView):
     model = Event
     template_name = 'events.html'
     context_object_name = 'events'
@@ -47,7 +47,7 @@ class ShowEventsView(views.ListView):
         return context
 
 
-class EventDetailsView(views.DetailView):
+class EventDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
     model = Event
     template_name = 'event_details.html'
     context_object_name = 'event'
@@ -59,7 +59,7 @@ class EventDetailsView(views.DetailView):
         return context
 
 
-class ShowCarsView(views.ListView):
+class ShowCarsView(auth_mixin.LoginRequiredMixin, views.ListView):
     model = Event
     template_name = 'cars.html'
     context_object_name = 'car'
@@ -70,7 +70,7 @@ class ShowCarsView(views.ListView):
         return context
 
 
-class CarDetailsView(views.DetailView):
+class CarDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
     model = Car
     template_name = 'car_details.html'
     context_object_name = 'car'
@@ -82,7 +82,7 @@ class CarDetailsView(views.DetailView):
         return context
 
 
-class ShowToolsView(views.ListView):
+class ShowToolsView(auth_mixin.LoginRequiredMixin, views.ListView):
     model = Tool
     template_name = 'tools.html'
     context_object_name = 'tools'
@@ -94,7 +94,7 @@ class ShowToolsView(views.ListView):
         return context
 
 
-class ToolDetailsView(views.DetailView):
+class ToolDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
     model = Tool
     template_name = 'tool_details.html'
     context_object_name = 'tool'
@@ -106,7 +106,7 @@ class ToolDetailsView(views.DetailView):
         return context
 
 
-class ShowPartsView(views.ListView):
+class ShowPartsView(auth_mixin.LoginRequiredMixin, views.ListView):
     model = CarPart
     template_name = 'parts.html'
     context_object_name = 'parts'
@@ -118,7 +118,7 @@ class ShowPartsView(views.ListView):
         return context
 
 
-class PartDetailsView(views.DetailView):
+class PartDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
     model = CarPart
     template_name = 'part_details.html'
     context_object_name = 'part'

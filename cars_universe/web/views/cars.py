@@ -10,7 +10,8 @@ from cars_universe.web.models.additive_models import Event
 from cars_universe.web.models.models import Car
 
 
-class CreateCarView(views.CreateView):
+class CreateCarView(auth_mixin.LoginRequiredMixin, views.CreateView):
+
     template_name = 'car_create.html'
     form_class = CreateCarForm
     success_url = reverse_lazy('dashboard')
