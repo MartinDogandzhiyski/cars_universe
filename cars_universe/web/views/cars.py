@@ -23,7 +23,7 @@ class CreateCarView(auth_mixin.LoginRequiredMixin, views.CreateView):
 
 
 def edit_car(request, pk):
-    if request.user.is_staff:
+    if request.user.is_authenticated:
         instance = Car.objects.get(pk=pk)
         if request.method == 'POST':
             form = EditCarForm(request.POST, instance=instance)
@@ -41,7 +41,7 @@ def edit_car(request, pk):
 
 
 def delete_car(request, pk):
-    if request.user.is_staff:
+    if request.user.is_authenticated:
         car = Car.objects.get(pk=pk)
         if request.method == 'POST':
             form = DeleteCarForm(request.POST, instance=car)
