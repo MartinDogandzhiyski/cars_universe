@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="add some tests and exceptions handlings">
+    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="added admin's custom options">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/cars_universe_db.mGfqOQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/cars_universe_db.mGfqOQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/profile_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/profile_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/profile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tool_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_create.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +237,7 @@
       <workItem from="1670173989010" duration="2308000" />
       <workItem from="1670333857556" duration="4234000" />
       <workItem from="1670857528316" duration="2720000" />
-      <workItem from="1671026557684" duration="9152000" />
+      <workItem from="1671026557684" duration="12697000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -499,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671039373230</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="added admin's custom options">
+      <created>1671040747438</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1671040747438</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +532,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="add some tests and exceptions handlings" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some tests and exceptions handlings" />
+    <MESSAGE value="added admin's custom options" />
+    <option name="LAST_COMMIT_MESSAGE" value="added admin's custom options" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cars_universe$Test__cars_universe_accounts_tests.coverage" NAME="Test: cars_universe.accounts.tests Coverage Results" MODIFIED="1671039258660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

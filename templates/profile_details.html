@@ -32,20 +32,20 @@
 
 </head>
 
-  <body>
+<body>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+<!-- ***** Preloader Start ***** -->
+<div id="preloader">
+    <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
-    <!-- ***** Preloader End ***** -->
-    <!-- Header -->
+</div>
+<!-- ***** Preloader End ***** -->
 
-    <header class="">
+<!-- Header -->
+<header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="{% url 'dashboard' %}"><h2>Cars <em>Universe</em></h2></a>
@@ -57,18 +57,18 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'dashboard' %}">Home
-
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Our Shop</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'tools' %}">Our Shop</a>
+                        <span class="sr-only">(current)</span>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'events' %}">Events</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile details' request.user.id %}">Profile
-                            <span class="sr-only">(current)</span>
+
                         </a>
                     </li>
                     <li class="nav-item">
@@ -87,9 +87,10 @@
                     {% if request.user.is_staff %}
                         <li class="nav-item">
                             <a class="nav-link " href="{% url 'tool create' %}">Add tool</a>
+
                         </li>
                     {% endif %}
-                    {% if request.user.is_staff %}
+                    {% if request.user.is_superuser %}
                         <li class="nav-item">
                             <a class="nav-link " href="{% url 'event create' %}">Add event</a>
                         </li>
@@ -104,101 +105,84 @@
         </div>
     </nav>
 </header>
-<hr></hr>
-<hr></hr>
-<hr></hr>
-<hr></hr>
+
+<!-- Page Content -->
+<!-- Banner Starts Here -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{% static 'assets/images/3-dash.jpg' %}" alt="First slide">
+            <div class="carousel-caption d-none d-md-block font">
+                <h3>My</h3>
+                <hr></hr>
+                <p class="font2">Profile...</p>
+            </div>
+        </div>
 
 
-<div class="container d-flex justify-content-center align-items-center">
+    </div>
 
+    <!-- Banner Ends Here -->
 
-
-             <div class="card">
-
-              <div class="upper">
-
-                <img src="{% static 'assets/images/slide-1.jpg' %}" height="200" width="450">
-
-              </div>
-
-              <div class="user text-center">
-
-                <div class="profile">
-
-                  <img src="{{ profile.picture }}" class="rounded-circle" width="80">
-
+<div class="best-features about-features">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Our Background</h2>
                 </div>
-
-              </div>
-
-
-              <div class="mt-5 text-center">
-
-                <h4 class="mb-0">{{ profile.first_name }} {{ profile.last_name }}</h4>
-                <span class="text-muted d-block mb-2">{{ profile.description }}</span>
-
-                {% if is_owner %}
-                    <a href="{% url 'edit profile' request.user.id %}" class="btn btn-danger">Edit</a>
-                    <a href="{% url 'delete profile' request.user.id %}" class="btn btn-danger">Delete</a>
-                    <a href="{% url 'change password' %}" class="btn btn-danger">Change Password</a>
-                {% endif %}
-
-
-                <div class="d-flex justify-content-between align-items-center mt-4 px-4">
-
-                  <div class="stats">
-                    <a href="{% url 'cars' %}" class="btn btn-primary">Cars</a>
-
-                  </div>
-
-
-                  <div class="stats">
-                    <a href="#" class="btn btn-primary">####</a>
-
-                  </div>
-
-
+            </div>
+            <div class="col-md-6">
+                <div class="right-image">
+                    <img src="{{ profile.picture }}" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="left-content">
+                    <h4>Profile info:</h4>
+                    <p>{{ profile.description }}
+                    </p>
+                    {% if is_owner %}
+                        <a href="{% url 'edit profile' request.user.id %}" class="btn btn-dark">Edit</a>
+                        <a href="{% url 'delete profile' request.user.id %}" class="btn btn-dark">Delete</a>
+                        <a href="{% url 'change password' %}" class="btn btn-dark">Change Password</a>
+                    {% endif %}
 
 
                 </div>
-
-              </div>
-
-             </div>
-
-           </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 
-<!-- Bootstrap core JavaScript -->
-<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Additional Scripts -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/js/owl.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
 
 
-<!-- Additional Scripts -->
-<script src="{% static 'assets/js/custom.js' %}"></script>
-<script src="{% static 'assets/js/owl.js' %}"></script>
-<script src="{% static 'assets/js/slick.js' %}"></script>
-<script src="{% static 'assets/js/isotope.js' %}"></script>
-<script src="{% static 'assets/js/accordions.js' %}"></script>
-
-
-<script language="text/Javascript">
-    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-    function clearField(t) {                   //declaring the array outside of the
-        if (!cleared[t.id]) {                      // function makes it static and global
-            cleared[t.id] = 1;  // you could use true and false, but that's more typing
-            t.value = '';         // with more chance of typos
-            t.style.color = '#fff';
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) {                   //declaring the array outside of the
+            if (!cleared[t.id]) {                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value = '';         // with more chance of typos
+                t.style.color = '#fff';
+            }
         }
-    }
-</script>
+    </script>
 
-
+</div>
 </body>
 
 </html>
