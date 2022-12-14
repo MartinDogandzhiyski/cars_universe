@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/templates/page_not_found.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/cars.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/cars.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -68,7 +70,107 @@
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe\web" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django tests.Test: cars_universe.accounts.tests.TestCreatingAndLoggingUser.check_if_user_is_created_and_logged_properly">
+    <configuration name="Test: cars_universe.accounts.tests" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="cars_universe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="cars_universe.accounts.tests" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: cars_universe.accounts.tests.TestCreatingAndLoggingUser.check_if_user_is_created_and_logged_properly" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="cars_universe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="cars_universe.accounts.tests.TestCreatingAndLoggingUser.check_if_user_is_created_and_logged_properly" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: cars_universe.accounts.tests.TestCreatingUser" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="cars_universe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="cars_universe.accounts.tests.TestCreatingUser" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: cars_universe.accounts.tests.TestCreatingUser.check_if_user_is_created_properly" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="cars_universe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="cars_universe.accounts.tests.TestCreatingUser.check_if_user_is_created_properly" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: cars_universe.accounts.tests.TestLoginUser" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="cars_universe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="cars_universe.accounts.tests.TestLoginUser" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="cars_universe" type="Python.DjangoServer" factoryName="Django server">
       <module name="cars_universe" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,6 +195,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: cars_universe.accounts.tests.TestCreatingAndLoggingUser.check_if_user_is_created_and_logged_properly" />
+        <item itemvalue="Django tests.Test: cars_universe.accounts.tests" />
+        <item itemvalue="Django tests.Test: cars_universe.accounts.tests.TestCreatingUser" />
+        <item itemvalue="Django tests.Test: cars_universe.accounts.tests.TestLoginUser" />
+        <item itemvalue="Django tests.Test: cars_universe.accounts.tests.TestCreatingUser.check_if_user_is_created_properly" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -120,7 +231,8 @@
       <workItem from="1669820891825" duration="7567000" />
       <workItem from="1670173989010" duration="2308000" />
       <workItem from="1670333857556" duration="4234000" />
-      <workItem from="1670857528316" duration="2108000" />
+      <workItem from="1670857528316" duration="2720000" />
+      <workItem from="1671026557684" duration="7744000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -374,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670345303130</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="update">
+      <created>1670862794569</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1670862794569</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,5 +513,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cars_universe$Test__cars_universe_accounts_tests.coverage" NAME="Test: cars_universe.accounts.tests Coverage Results" MODIFIED="1671039258660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/cars_universe$Test__cars_universe_accounts_tests_TestLoginUser.coverage" NAME="Test: cars_universe.accounts.tests.TestLoginUser Coverage Results" MODIFIED="1671039192360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/cars_universe$Test__cars_universe_accounts_tests_TestCreatingUser.coverage" NAME="Test: cars_universe.accounts.tests.TestCreatingUser Coverage Results" MODIFIED="1671039210176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/cars_universe$Test__cars_universe_accounts_tests_TestCreatingAndLoggingUser_check_if_user_is_created_and_logged_properly.coverage" NAME="Test: cars_universe.accounts.tests.TestCreatingAndLoggingUser.check_if_user_is_created_and_logged_properly Coverage Results" MODIFIED="1671039319816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/cars_universe$Test__cars_universe_accounts_tests_TestCreatingUser_check_if_user_is_created_properly.coverage" NAME="Test: cars_universe.accounts.tests.TestCreatingUser.check_if_user_is_created_properly Coverage Results" MODIFIED="1671039070512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

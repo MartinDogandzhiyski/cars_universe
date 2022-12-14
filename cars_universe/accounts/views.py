@@ -21,6 +21,10 @@ from rest_framework import generics as rest_views
 UserModel = get_user_model()
 
 
+def page_not_found(request):
+    return render(request, 'page_not_found.html')
+
+
 class CreateUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserModel
@@ -116,32 +120,38 @@ class ProfileDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
 
 
 def edit_profile(request, pk):
-    if request.user.is_authenticated:
-        profile = Profile.objects.get(pk=pk)
-        if request.method == 'POST':
-            form = EditProfileForm(request.POST, instance=profile)
-            if form.is_valid():
-                form.save()
-                return redirect('dashboard')
-        else:
-            form = EditProfileForm(instance=profile)
-        context = {
-            'form': form
-        }
-        return render(request, 'accounts/profile_edit.html', context)
+    try:
+        if request.user.is_authenticated:
+            profile = Profile.objects.get(pk=pk)
+            if request.method == 'POST':
+                form = EditProfileForm(request.POST, instance=profile)
+                if form.is_valid():
+                    form.save()
+                    return redirect('dashboard')
+            else:
+                form = EditProfileForm(instance=profile)
+            context = {
+                'form': form
+            }
+            return render(request, 'accounts/profile_edit.html', context)
+    except Profile.DoesNotExist:
+        return render(request, 'page_not_found.html')
 
 
 def delete_profile(request, pk):
-    if request.user.is_authenticated:
-        profile = Profile.objects.get(pk=pk)
-        if request.method == 'POST':
-            form = DeleteProfileForm(request.POST, instance=profile)
-            if form.is_valid():
-                form.save()
-                return redirect('home_pg')
-        else:
-            form = DeleteProfileForm(instance=profile)
-        context = {
-            'form': form
-        }
-        return render(request, 'accounts/profile_delete.html', context)
+    try:
+        if request.user.is_authenticated:
+            profile = Profile.objects.get(pk=pk)
+            if request.method == 'POST':
+                form = DeleteProfileForm(request.POST, instance=profile)
+                if form.is_valid():
+                    form.save()
+                    return redirect('home_pg')
+            else:
+                form = DeleteProfileForm(instance=profile)
+            context = {
+                'form': form
+            }
+            return render(request, 'accounts/profile_delete.html', context)
+    except Profile.DoesNotExist:
+        return render(request, 'page_not_found.html')
