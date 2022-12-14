@@ -18,6 +18,16 @@ class TestCreatingAndLoggingUser(django_test.TestCase):
         return user
 
 
+class CreateWorkoutTests(TestCreatingAndLoggingUser):
+    def test_create_workout__when_creates_new_entity__expect_workout_to_have_correct_user(self):
+        user1 = self.check_if_user_is_created_and_logged_properly()
+        self.client.logout()
+        user2 = self.check_if_user_is_created_and_logged_properly({
+            'username': 'martind19',
+            'email': 'martind19@abv.bg',
+            'password': 'martinch0D19',
+        })
+
 
 
 

@@ -10,8 +10,13 @@ class ProfileAdmin(admin.ModelAdmin):
     list_filter = ('first_name', )
     ordering = ('last_name', )
     readonly_fields = ('gender', )
+    search_fields = ('first_name',)
 
 
 @admin.register(Car)
 class CarAdmin(admin.ModelAdmin):
-    list_display = ('name', 'type')
+    list_display = ('name', 'type', 'hp')
+    list_filter = ('type',)
+    ordering = ('hp',)
+    readonly_fields = ('user',)
+    search_fields = ('user',)
