@@ -59,15 +59,16 @@
                         <a class="nav-link" href="{% url 'dashboard' %}">Home
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'tools' %}">Our Shop</a>
                         <span class="sr-only">(current)</span>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'events' %}">Events</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="{% url 'profile details' request.user.id %}">Profile
+                            <span class="sr-only">(current)</span>
 
                         </a>
                     </li>
@@ -129,12 +130,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Our Background</h2>
+                    <h2>{{ profile.first_name }} {{ profile.last_name }}</h2>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="right-image">
-                    <img src="{{ profile.picture }}" alt="">
+                    <img src="{{ profile.picture }}" height="500" width="150" alt="">
                 </div>
             </div>
             <div class="col-md-6">
@@ -154,7 +155,67 @@
         </div>
     </div>
 </div>
+    <div class="latest-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>My Cars</h2>
 
+                    </div>
+                </div>
+                {% for car in all_cars %}
+                    {% if car.user_id == request.user.id %}
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <a href="{% url 'car details' car.id %}"><img src="{{ car.photo.url }}" width="150" height="250" alt=""></a>
+                                <div class="down-content">
+                                    <a href="{% url 'car details' car.id %}"><h4>Project name: {{ car.name }}</h4></a>
+                                    <h6>{{ car.type }}</h6>
+                                    <p>{{ car.description }}</p>
+                                    <ul class="stars">
+                                        <p>{{ car.made_date }}</p>
+                                    </ul>
+                                    <span>Owner: {{ profile.first_name }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+<div class="latest-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Other's Cars</h2>
+
+                    </div>
+                </div>
+                {% for car in all_cars %}
+                    {% if car.user_id != request.user.id %}
+                        <div class="col-md-4">
+                            <div class="product-item">
+                                <a href="{% url 'car details' car.id %}"><img src="{{ car.photo.url }}" width="150" height="250" alt=""></a>
+                                <div class="down-content">
+                                    <a href="{% url 'car details' car.id %}"><h4>Project name: {{ car.name }}</h4></a>
+                                    <h6>{{ car.type }}</h6>
+                                    <p>{{ car.description }}</p>
+                                    <ul class="stars">
+                                        <p>{{ car.made_date }}</p>
+                                    </ul>
+                                    <span>Owner: </span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 
 
 

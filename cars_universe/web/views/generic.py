@@ -4,6 +4,7 @@ from django.contrib.auth import mixins as auth_mixin
 from cars_universe.accounts.models import CarsUniverseUser, Profile
 from cars_universe.web.models.additive_models import Event
 from cars_universe.web.models.models import Car, Tool, CarPart
+from cars_universe.web.views.cars import event_is_liked_by_user, event_likes_count
 
 
 def about(request):
@@ -54,8 +55,9 @@ class EventDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        event_likes_count(self.object)
+        event_is_liked_by_user(self.request, self.object)
         context['events'] = Event.objects.all()
-
         return context
 
 

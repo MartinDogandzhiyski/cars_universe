@@ -160,7 +160,8 @@
                         <a href="{% url 'event details' event.id %}"><img src="{{ event.photo.url }}" width="150"
                                                                           height="250" alt=""></a>
                         <div class="down-content">
-                            <a href="#"><h4>{{ event.name }}</h4></a>
+                            <a href="{% url 'event details' event.id %}"><h4>{{ event.name }}</h4></a>
+                            <a href="#"><h4>Likes: {{ object.likes }}</h4></a>
                             <h6>{{ event.date }}</h6>
                             <p>{{ event.description }}</p>
                             <ul class="stars">
@@ -169,7 +170,11 @@
                                     <a href="{% url 'delete event' event.id %}" class="btn btn-danger">Delete</a>
                                 {% endif %}
                             </ul>
-                            <span>Likes (24)</span>
+                            {% if not object.liked_by_user %}
+                                <span><a href="{% url 'like eventt' pk=object.pk %}" class="btn btn-dark">Like</a></span>
+                            {% else %}
+                                <span><a href="{% url 'like eventt' pk=object.pk %}" class="btn btn-dark">Unlike</a></span>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

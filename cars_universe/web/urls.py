@@ -1,7 +1,8 @@
 from django.urls import path
 
 from cars_universe.web.views.car_parts import create_part, delete_part, edit_part
-from cars_universe.web.views.cars import create_event, delete_event, edit_event, CreateCarView, edit_car, delete_car
+from cars_universe.web.views.cars import create_event, delete_event, edit_event, CreateCarView, edit_car, delete_car, \
+    like_event
 
 from cars_universe.web.views.generic import HomeView, DashboardView, EventDetailsView, ShowEventsView, ShowCarsView, \
     ShowToolsView, ToolDetailsView, about, PartDetailsView, ShowPartsView, CarDetailsView
@@ -15,6 +16,7 @@ urlpatterns = (
     path('event/delete/<int:pk>/', delete_event, name='delete event'),
     path('events/', ShowEventsView.as_view(), name='events'),
     path('event/details/<int:pk>/', EventDetailsView.as_view(), name='event details'),
+    path('like/<int:pk>/', like_event, name='like eventt'),
     path('car/create/', CreateCarView.as_view(), name='create car'),
     path('cars', ShowCarsView.as_view(), name='cars'),
     path('car/details/<int:pk>/', CarDetailsView.as_view(), name='car details'),

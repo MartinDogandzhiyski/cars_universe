@@ -104,14 +104,9 @@ class ProfileDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         cars = list(Car.objects.filter(user_id=self.object.user_id))
-        # car_photos = CarPhoto.objects.filter(tagged_cars__in=cars).distinct()
 
-        #  total_likes_count = sum(cp.likes for cp in car_photos)
-        # total_car_photos_count = len(car_photos)
-
+        context['all_cars'] = Car.objects.all()
         context.update({
-            # 'total_likes_count': total_likes_count,
-            # 'total_car_photos_count': total_car_photos_count,
             'is_owner': self.object.user_id == self.request.user.id,
             'cars': cars,
         })

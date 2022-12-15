@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="added admin's custom options">
+    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/cars_universe_db.mGfqOQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/cars_universe_db.mGfqOQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/models/additive_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/additive_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/cars.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/cars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accounts/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/change_password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accounts/profile_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accounts/profile_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accounts/profile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tool_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tools.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tools.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,22 +51,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/SoftUni_exercise/python_web/python_web_basics/cars_universe&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/SoftUni_exercise/python_web/python_web_basics/raceagram",
+    "list.type.of.created.stylesheet": "CSS"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\assets\images" />
@@ -237,7 +245,8 @@
       <workItem from="1670173989010" duration="2308000" />
       <workItem from="1670333857556" duration="4234000" />
       <workItem from="1670857528316" duration="2720000" />
-      <workItem from="1671026557684" duration="12697000" />
+      <workItem from="1671026557684" duration="12899000" />
+      <workItem from="1671044627499" duration="12941000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -512,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671040747438</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="update">
+      <created>1671044495984</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1671044495984</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,10 +546,26 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update" />
     <MESSAGE value="add some tests and exceptions handlings" />
     <MESSAGE value="added admin's custom options" />
-    <option name="LAST_COMMIT_MESSAGE" value="added admin's custom options" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/event_details.html</url>
+          <line>170</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/cars_universe/web/views/cars.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cars_universe$Test__cars_universe_accounts_tests.coverage" NAME="Test: cars_universe.accounts.tests Coverage Results" MODIFIED="1671039258660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

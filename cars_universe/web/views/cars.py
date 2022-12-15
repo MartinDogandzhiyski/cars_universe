@@ -1,12 +1,14 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.contrib.auth import mixins as auth_mixin
 
 from cars_universe.forms import CreateCarForm, EditCarForm, DeleteCarForm, CreateEventForm, EditEventForm, \
     DeleteEventForm
-from django.views import generic as views
+from django.views import generic as views, View
 
-from cars_universe.web.models.additive_models import Event
+from cars_universe.web.models.additive_models import Event, Like
 from cars_universe.web.models.models import Car
 
 
@@ -55,6 +57,36 @@ def delete_car(request, pk):
             'car': car,
         }
         return render(request, 'car_delete.html', context)
+
+
+def event_likes_count(event):
+    return event.likes
+
+
+@login_required
+def like_event(request, pk):
+    user_liked_event = Like.objects.filter(event_id=pk, user_id=request.user.pk)
+    event = Event.objects.get(pk=pk)
+    if user_liked_event:
+        event.likes -= 1
+        user_liked_event.delete()
+    else:
+        Like.objects.create(
+            event_id=pk,
+            user_id=request.user.pk,
+        )
+        event.likes += 1
+
+    return redirect('event details', pk)
+
+
+def event_is_liked_by_user(request, event):
+    liked = Like.objects.filter(event_id=event.pk, user_id=request.user.pk)
+
+    event.liked_by_user = True if liked else False
+
+    return event
+
 
 
 def create_event(request):
