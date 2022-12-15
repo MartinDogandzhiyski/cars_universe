@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/cars_universe_db.mGfqOQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/cars_universe_db.mGfqOQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/models/additive_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/additive_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/web/views/cars.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/cars.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/profile_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/profile_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/profile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tool_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tools.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tools.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +232,7 @@
       <workItem from="1670333857556" duration="4234000" />
       <workItem from="1670857528316" duration="2720000" />
       <workItem from="1671026557684" duration="12899000" />
-      <workItem from="1671044627499" duration="12941000" />
+      <workItem from="1671044627499" duration="15729000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -528,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671044495984</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="update">
+      <created>1671129258222</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1671129258222</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,7 +554,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/cars_universe/web/views/cars.py</url>
-          <line>66</line>
+          <line>67</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

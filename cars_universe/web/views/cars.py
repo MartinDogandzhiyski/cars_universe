@@ -60,7 +60,8 @@ def delete_car(request, pk):
 
 
 def event_likes_count(event):
-    return event.likes
+    event.likes = event.like_set.count()
+    return event
 
 
 @login_required
