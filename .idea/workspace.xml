@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/profiles.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/SoftUni_exercise/python_web/python_web_basics/raceagram",
+    "last_opened_file_path": "D:/SoftUni_exercise/python_advanced/error_handling_exercise",
     "list.type.of.created.stylesheet": "CSS"
   },
   "keyToStringList": {
@@ -230,7 +230,10 @@
       <workItem from="1670333857556" duration="4234000" />
       <workItem from="1670857528316" duration="2720000" />
       <workItem from="1671026557684" duration="12899000" />
-      <workItem from="1671044627499" duration="18798000" />
+      <workItem from="1671044627499" duration="18850000" />
+      <workItem from="1671356770915" duration="3352000" />
+      <workItem from="1673514172765" duration="71000" />
+      <workItem from="1674205666436" duration="302000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -533,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671295845515</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="update">
+      <created>1671297394351</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1671297394351</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
