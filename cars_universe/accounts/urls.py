@@ -14,3 +14,4 @@ urlpatterns = (
     path('profile/edit/<int:pk>/', edit_profile, name='edit profile'),
     path('profile/delete/<int:pk>/', delete_profile, name='delete profile'),
 )
+#aa
