@@ -37,7 +37,7 @@ class Event(models.Model):
         blank=True
     )
 
-    address = models.CharField(max_length=40,)
+    address = models.CharField(max_length=40, )
 
     likes = models.IntegerField(
         default=0,
@@ -50,7 +50,7 @@ class Event(models.Model):
 #     event = models.ForeignKey(Event, on_delete=models.CASCADE)
 #     image = models.ImageField(upload_to='media')
 class Like(models.Model):
-    event = models.ForeignKey(Event, on_delete=models.RESTRICT, null=False, blank=True,)
+    event = models.ForeignKey(Event, on_delete=models.RESTRICT, null=False, blank=True, )
     user = models.ForeignKey(
         UserModel,
         on_delete=models.RESTRICT,

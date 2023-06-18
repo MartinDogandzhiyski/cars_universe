@@ -7,11 +7,8 @@
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_universe/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/profile_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/event_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/part_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tool_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/models/additive_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/additive_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +250,7 @@
       <workItem from="1679501867904" duration="344000" />
       <workItem from="1686675884724" duration="11000" />
       <workItem from="1686936440674" duration="72000" />
-      <workItem from="1687103980902" duration="5117000" />
+      <workItem from="1687103980902" duration="5946000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1668114448060</created>
@@ -577,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687106799699</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="update">
+      <created>1687109123913</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1687109123914</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
