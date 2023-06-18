@@ -67,9 +67,9 @@ class Profile(models.Model):
     )
 
     picture = models.ImageField(upload_to="mediafiles/",
-                              validators=(
-                                  # validate_file_max_size(5),
-                              )
+                              blank=True,
+                              null=True,
+                              help_text='Maximum file size allowed is 5Mb'
                               )
 
     date_of_birth = models.DateField(
