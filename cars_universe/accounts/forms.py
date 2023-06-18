@@ -12,9 +12,7 @@ class CreateProfileForm(BootstrapFormMixin, auth_forms.UserCreationForm):
     last_name = forms.CharField(
         max_length=Profile.LAST_NAME_MAX_LENGTH,
     )
-    picture = forms.URLField(
-
-    )
+    picture = forms.ImageField(required=False)
     date_of_birth = forms.DateField(
 
     )
@@ -46,6 +44,10 @@ class CreateProfileForm(BootstrapFormMixin, auth_forms.UserCreationForm):
 
             user=user,
         )
+        if 'picture' in self.cleaned_data and self.cleaned_data['picture']:
+            picture_file = self.cleaned_data['picture']
+            picture_path = 'mediafiles/' + picture_file.name
+            profile.picture.save(picture_path, picture_file, save=True)
         if commit:
             profile.save()
         return user
