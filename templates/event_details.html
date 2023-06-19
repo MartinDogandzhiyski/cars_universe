@@ -155,7 +155,7 @@
                                 <a href="{% url 'delete event' event.id %}" class="btn btn-danger">Delete</a>
                             {% endif %}
                         </ul>
-                        {% if not object.liked_by_user %}
+                        {% if not event.user_liked_event %}
                             <span><a href="{% url 'like eventt' pk=object.pk %}" class="btn btn-dark">Like</a></span>
                         {% else %}
                             <span><a href="{% url 'like eventt' pk=object.pk %}" class="btn btn-dark">Unlike</a></span>
