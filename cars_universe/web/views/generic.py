@@ -57,8 +57,8 @@ class EventDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
         event = self.get_object()
         context = super().get_context_data(**kwargs)
         context['comment_form'] = CommentForm()
-        context['comments'] = event.comments.all()
-        print(context['comments'])
+        context['comments'] = Comment.objects.filter(event_id=event.id)
+        print(Comment.objects.filter(event_id=event.id))
         return context
 
     def post(self, request, *args, **kwargs):
@@ -153,3 +153,17 @@ class PartDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
         context['parts'] = CarPart.objects.all()
 
         return context
+
+
+
+
+#def course(request, course_id):
+ #   course_list = Course.objects.filter(courseid=course_id)
+  #  enrollments_list = Enrollment.objects.filter(courseid=course_id)
+   # template = loader.get_template('stadmin/course.html')
+    #context = {
+     #   'course': course_list[0],
+      #  'enrollments': enrollments_list,
+    #}
+
+    #return HttpResponse(template.render(context, request))
