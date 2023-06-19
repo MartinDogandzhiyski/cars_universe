@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-
+from django.utils import timezone
 from cars_universe.web.models.models import Car, validate_image
 
 UserModel = get_user_model()
@@ -44,6 +44,16 @@ class Event(models.Model):
     )
 
     date = models.DateTimeField()
+
+    comments = models.ManyToManyField('Comment', related_name='event_comments')
+
+
+class Comment(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
+    content = models.TextField()
+    body = models.TextField(default='')
+    created_at = models.DateTimeField(default=timezone.now)
 
 
 class Like(models.Model):

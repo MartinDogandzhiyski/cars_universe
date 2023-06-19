@@ -5,7 +5,7 @@ from cars_universe.web.views.cars import create_event, delete_event, edit_event,
     like_event, like_car
 
 from cars_universe.web.views.generic import HomeView, DashboardView, EventDetailsView, ShowEventsView, ShowCarsView, \
-    ShowToolsView, ToolDetailsView, about, PartDetailsView, ShowPartsView, CarDetailsView
+    ShowToolsView, ToolDetailsView, about, PartDetailsView, ShowPartsView, CarDetailsView, add_comment
 from cars_universe.web.views.tools import create_tool, delete_tool, edit_tool
 
 urlpatterns = (
@@ -34,5 +34,6 @@ urlpatterns = (
     path('parts/', ShowPartsView.as_view(), name='parts'),
     path('part/details/<int:pk>/', PartDetailsView.as_view(), name='part details'),
     path('about/', about, name='about'),
+    path('event/details/<int:event_id>/add_comment/', add_comment, name='add_comment'),
 
 )

@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic as views
 from django.contrib.auth import mixins as auth_mixin
 from cars_universe.accounts.models import CarsUniverseUser, Profile
-from cars_universe.web.models.additive_models import Event
+from cars_universe.forms import CommentForm
+from cars_universe.web.models.additive_models import Event, Comment
 from cars_universe.web.models.models import Car, Tool, CarPart
 from cars_universe.web.views.cars import event_is_liked_by_user, event_likes_count
 
@@ -53,11 +54,34 @@ class EventDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
     context_object_name = 'event'
 
     def get_context_data(self, **kwargs):
+        event = self.get_object()
         context = super().get_context_data(**kwargs)
-        event_likes_count(self.object)
-        event_is_liked_by_user(self.request, self.object)
-        context['events'] = Event.objects.all()
+        context['comment_form'] = CommentForm()
+        context['comments'] = event.comments.all()
+        print(context['comments'])
         return context
+
+    def post(self, request, *args, **kwargs):
+        event = self.get_object()
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.event = event
+            comment.user = request.user
+            comment.save()
+            return redirect('event_details', pk=event.pk)
+
+        context = self.get_context_data(**kwargs)
+        context['comment_form'] = comment_form
+        return self.render_to_response(context)
+
+
+def add_comment(request, event_id):
+    if request.method == 'POST':
+        event = get_object_or_404(Event, id=event_id)
+        comment_text = request.POST.get('comment')
+        Comment.objects.create(user=request.user, event=event, body=comment_text)
+    return redirect('event details', event_id)
 
 
 class ShowCarsView(auth_mixin.LoginRequiredMixin, views.ListView):
@@ -129,7 +153,3 @@ class PartDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
         context['parts'] = CarPart.objects.all()
 
         return context
-
-
-
-

@@ -2,7 +2,7 @@ from django import forms
 
 from cars_universe.accounts.models import Profile
 from cars_universe.helpers import BootstrapFormMixin, DisabledFieldsFormMixin
-from cars_universe.web.models.additive_models import Car, Event
+from cars_universe.web.models.additive_models import Car, Event, Comment
 from cars_universe.web.models.models import Tool, CarPart
 
 
@@ -187,5 +187,7 @@ class DeletePartForm(forms.ModelForm):
         fields = ('name',)
 
 
-
-
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['content']
