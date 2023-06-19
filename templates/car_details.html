@@ -140,7 +140,9 @@
                                                                           height="250" alt=""></a>
                         <div class="down-content">
                             <a href="{% url 'car details' car.id %}"><h4>{{ car.name }}</h4></a>
-                            <h6>{{ car.hp }}hp</h6>
+                            <h6>Brand: {{ car.type }}, {{ car.hp }}hp</h6>
+
+                            <a><h4>Likes: {{ object.likes }}</h4></a>
                             <p>{{ car.description }}</p>
                             <ul class="stars">
                                 {% if request.user.id == car.user_id %}
@@ -148,7 +150,12 @@
                                     <a href="{% url 'delete car' car.id %}" class="btn btn-danger">Delete</a>
                                 {% endif %}
                             </ul>
-                            <span>Brand: {{ car.type }}</span>
+
+                            {% if not object.liked_by_user %}
+                                <span><a href="{% url 'like car' pk=object.pk %}" class="btn btn-dark">Like</a></span>
+                            {% else %}
+                                <span><a href="{% url 'like car' pk=object.pk %}" class="btn btn-dark">Unlike</a></span>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

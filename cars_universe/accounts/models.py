@@ -12,15 +12,6 @@ from cars_universe.accounts.managers import CarsUniverseUserManager
 '''
 
 
-#def validate_image(fieldfile_obj):
- #   filesize = fieldfile_obj.file.size
-  #  megabyte_limit = 5.0
-   # if filesize > megabyte_limit * 1024 * 1024:
-    #    raise ValidationError("Max file size is %sMB" % str(megabyte_limit))
-
-
-
-
 class CarsUniverseUser(auth_models.AbstractUser, auth_models.PermissionsMixin):
     USERNAME_MAX_LENGTH = 25
 
@@ -36,7 +27,6 @@ class CarsUniverseUser(auth_models.AbstractUser, auth_models.PermissionsMixin):
     is_staff = models.BooleanField(
         default=False,
     )
-
 
     USERNAME_FIELD = 'username'
 
@@ -67,10 +57,10 @@ class Profile(models.Model):
     )
 
     picture = models.ImageField(upload_to="mediafiles/",
-                              blank=True,
-                              null=True,
-                              help_text='Maximum file size allowed is 5Mb'
-                              )
+                                blank=True,
+                                null=True,
+                                help_text='Maximum file size allowed is 5Mb'
+                                )
 
     date_of_birth = models.DateField(
         null=True,
@@ -103,5 +93,28 @@ class Profile(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
+
+class Product(models.Model):
+    name = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+
+class Cart(models.Model):
+    user = models.OneToOneField(
+        CarsUniverseUser,
+        on_delete=models.CASCADE,
+        primary_key=True,
+    )
+
+    items = models.ManyToManyField(
+        Product,
+        related_name='carts',
+    )
+
+    def __str__(self):
+        return f"Cart for {self.user.username}"
+
+    class Meta:
+        abstract = True
 
 

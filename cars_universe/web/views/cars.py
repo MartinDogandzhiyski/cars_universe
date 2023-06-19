@@ -8,12 +8,11 @@ from cars_universe.forms import CreateCarForm, EditCarForm, DeleteCarForm, Creat
     DeleteEventForm
 from django.views import generic as views, View
 
-from cars_universe.web.models.additive_models import Event, Like
+from cars_universe.web.models.additive_models import Event, Like, LikeCar
 from cars_universe.web.models.models import Car
 
 
 class CreateCarView(auth_mixin.LoginRequiredMixin, views.CreateView):
-
     template_name = 'car_create.html'
     form_class = CreateCarForm
     success_url = reverse_lazy('dashboard')
@@ -63,6 +62,10 @@ def event_likes_count(event):
     event.likes = event.like_set.count()
     return event
 
+def car_likes_count(car):
+    car.likes = car.like_set.count()
+    return car
+
 
 @login_required
 def like_event(request, pk):
@@ -77,8 +80,27 @@ def like_event(request, pk):
             user_id=request.user.pk,
         )
         event.likes += 1
+    event.save()
 
     return redirect('event details', pk)
+
+
+@login_required
+def like_car(request, pk):
+    user_liked_car = LikeCar.objects.filter(car_id=pk, user_id=request.user.pk)
+    car = Car.objects.get(pk=pk)
+    if user_liked_car:
+        car.likes -= 1
+        user_liked_car.delete()
+    else:
+        LikeCar.objects.create(
+            car_id=pk,
+            user_id=request.user.pk,
+        )
+        car.likes += 1
+    car.save()
+
+    return redirect('car details', pk)
 
 
 def event_is_liked_by_user(request, event):
@@ -88,6 +110,13 @@ def event_is_liked_by_user(request, event):
 
     return event
 
+
+def car_is_liked_by_user(request, car):
+    liked = LikeCar.objects.filter(car_id=car.pk, user_id=request.user.pk)
+
+    car.liked_by_user = True if liked else False
+
+    return car
 
 
 def create_event(request):

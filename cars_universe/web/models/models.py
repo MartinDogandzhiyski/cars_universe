@@ -3,6 +3,8 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.contrib.auth import get_user_model
 
+from cars_universe.accounts.models import Cart
+
 UserModel = get_user_model()
 
 
@@ -47,6 +49,9 @@ class Car(models.Model):
     user = models.ForeignKey(
         UserModel,
         on_delete=models.CASCADE,
+    )
+    likes = models.IntegerField(
+        default=0,
     )
 
     hp = models.IntegerField()
@@ -136,12 +141,6 @@ class CarPart(models.Model):
     )
 
 
-class Product(models.Model):
-    name = models.CharField(max_length=100)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    quantity = models.IntegerField()
 
 
-class CartItem(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity = models.IntegerField()
+

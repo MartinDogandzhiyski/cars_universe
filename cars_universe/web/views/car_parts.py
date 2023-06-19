@@ -1,8 +1,9 @@
 from django.shortcuts import redirect, render
 
+#from cars_universe.accounts.models import CartItem
 from cars_universe.forms import CreateToolForm, EditToolForm, DeleteToolForm, CreatePartForm, EditPartForm, \
     DeletePartForm
-from cars_universe.web.models.models import CarPart
+from cars_universe.web.models.models import CarPart, Tool, Car
 
 
 def create_part(request):
@@ -54,3 +55,23 @@ def delete_part(request, pk):
             'part': part,
         }
         return render(request, 'part_delete.html', context)
+
+
+def add_to_cart(request, product_type, pk):
+    product = ''
+    if request.user.is_authenticated:
+        if product_type == 'Tool':
+            product = Tool.objects.get(id=pk)
+        elif product_type == 'CarPart':
+            product = CarPart.objects.get(id=pk)
+
+ #       cart_item, created = CartItem.objects.get_or_create(
+  #          user=request.user,
+   #         product=product
+    #    )
+     #   cart_item.save()
+
+    return redirect('product_list')
+
+
+

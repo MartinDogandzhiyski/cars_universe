@@ -46,9 +46,6 @@ class Event(models.Model):
     date = models.DateTimeField()
 
 
-# class EventPhoto(models.Model):
-#     event = models.ForeignKey(Event, on_delete=models.CASCADE)
-#     image = models.ImageField(upload_to='media')
 class Like(models.Model):
     event = models.ForeignKey(Event, on_delete=models.RESTRICT, null=False, blank=True, )
     user = models.ForeignKey(
@@ -57,3 +54,9 @@ class Like(models.Model):
     )
 
 
+class LikeCar(models.Model):
+    car = models.ForeignKey(Car, on_delete=models.RESTRICT, null=False, blank=True, )
+    user = models.ForeignKey(
+        UserModel,
+        on_delete=models.RESTRICT,
+    )

@@ -165,7 +165,7 @@
                             <h6>{{ event.date }}</h6>
                             <p>{{ event.description }}</p>
                             <ul class="stars">
-                                {% if request.user.is_superuser %}
+                                {% if request.user.is_staff %}
                                     <a href="{% url 'edit event' event.id %}" class="btn btn-primary">Edit</a>
                                     <a href="{% url 'delete event' event.id %}" class="btn btn-danger">Delete</a>
                                 {% endif %}

@@ -56,8 +56,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'dashboard' %}">Home
-                        </a>
+                        <a class="nav-link" href="{% url 'dashboard' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'tools' %}">Our Shop</a>
@@ -66,36 +65,38 @@
                         <a class="nav-link" href="{% url 'events' %}">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profile details' request.user.id %}">Profile
-
-                        </a>
+                        <a class="nav-link" href="{% url 'profile details' request.user.id %}">Profile</a>
                     </li>
                     <li class="nav-item active">
                         <form method="post"></form>
                         <a class="nav-link" href="{% url 'create car' %}">Add car
                             <span class="sr-only">(current)</span>
-
                         </a>
                     </li>
                     <li class="nav-item">
                         <form method="post"></form>
-                        <a class="nav-link" href="{% url 'logout user' %}">Logout
-
-                        </a>
+                        <a class="nav-link" href="{% url 'logout user' %}">Logout</a>
                     </li>
-                    {% if request.user.is_staff %}
+                    {% if request.user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link " href="{% url 'tool create' %}">Add tool</a>
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
                         </li>
                     {% endif %}
                     {% if request.user.is_staff %}
                         <li class="nav-item">
-                            <a class="nav-link " href="{% url 'event create' %}">Add event</a>
+                            <a class="nav-link" href="{% url 'tool create' %}">Add tool</a>
                         </li>
                     {% endif %}
                     {% if request.user.is_staff %}
                         <li class="nav-item">
-                            <a class="nav-link " href="{% url 'part create' %}">Add part</a>
+                            <a class="nav-link" href="{% url 'event create' %}">Add event</a>
+                        </li>
+                    {% endif %}
+                    {% if request.user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'part create' %}">Add part</a>
                         </li>
                     {% endif %}
                 </ul>
@@ -103,6 +104,7 @@
         </div>
     </nav>
 </header>
+
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
