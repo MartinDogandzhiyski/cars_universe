@@ -3,7 +3,7 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.contrib.auth import get_user_model
 
-from cars_universe.accounts.models import Cart, CarsUniverseUser
+from cars_universe.accounts.models import CarsUniverseUser
 
 UserModel = get_user_model()
 
@@ -98,6 +98,13 @@ class Tool(models.Model):
     price = models.IntegerField(
         validators=[MinValueValidator(1)],
     )
+    orderr = models.ForeignKey(
+        'Order',
+        on_delete=models.CASCADE,
+        related_name='item_toolss',
+        blank = True,
+        null = True,
+    )
 
 
 class CarPart(models.Model):
@@ -139,5 +146,18 @@ class CarPart(models.Model):
     price = models.IntegerField(
         validators=[MinValueValidator(1)],
     )
+    orderr = models.ForeignKey(
+        'Order',
+        on_delete=models.CASCADE,
+        related_name='item_partss',
+        blank = True,
+        null = True,
+    )
 
 
+class Order(models.Model):
+    user = models.ForeignKey(CarsUniverseUser, on_delete=models.CASCADE)
+    address = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    item_tools = models.ManyToManyField(Tool)
+    item_parts = models.ManyToManyField(CarPart)

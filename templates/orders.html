@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'dashboard' %}">Back to site</a>
+    </li>
+    <title>Orders</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Orders</h1>
+
+<table>
+    <tr>
+        <th>Order ID</th>
+        <th>User</th>
+        <th>Address</th>
+        <th>Created At</th>
+        <th>Items</th>
+    </tr>
+    {% for order in orders %}
+        <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.user.username }}</td>
+            <td>{{ order.address }}</td>
+            <td>{{ order.created_at }}</td>
+            <td>
+                <ul>
+                    {% for item in items %}
+                        {% for it in item %}
+
+                                <li>{{ it.name }} ({{ it.id }})</li>
+
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+<script>
+    // JavaScript code
+    // Add your custom JavaScript code here, if needed
+</script>
+</body>
+</html>

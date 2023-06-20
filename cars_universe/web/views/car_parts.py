@@ -2,8 +2,8 @@ from django.shortcuts import redirect, render
 from django.contrib import messages
 # from cars_universe.accounts.models import CartItem
 from cars_universe.forms import CreateToolForm, EditToolForm, DeleteToolForm, CreatePartForm, EditPartForm, \
-    DeletePartForm
-from cars_universe.web.models.models import CarPart, Tool, Car
+    DeletePartForm, OrderForm
+from cars_universe.web.models.models import CarPart, Tool, Car, Order
 
 
 def create_part(request):
@@ -93,9 +93,12 @@ def add_to_cart(request, item_id, item_type):
 
 def remove_from_cart(request, item_id):
     cart = request.session.get('cart', {})
-    if item_id in cart:
-        del cart[item_id]
-        request.session['cart'] = cart
+
+    for key, val in cart.items():
+        if val['id'] == item_id:
+            del cart[key]
+            break
+    request.session['cart'] = cart
     return redirect('cart')
 
 
@@ -108,6 +111,7 @@ def clear_cart(request):
 def cart_page(request):
     cart = request.session.get('cart', {})
     cart_items = []
+    order_form = OrderForm()
     for item_id, item_info in cart.items():
         if item_info['type'] == 'tool':
             item = Tool.objects.get(pk=item_info['id'])
@@ -117,18 +121,65 @@ def cart_page(request):
             continue
         quantity = item_info.get('quantity', 1)
         total_price = item.price * quantity
+        order_form = OrderForm()
         cart_items.append({
             'item': item,
             'quantity': quantity,
-            'total_price': total_price
+            'total_price': total_price,
         })
-    #print(cart_items)
+    # print(cart_items)
     cart_total = sum(item['total_price'] for item in cart_items)
 
     context = {
         'cart_items': cart_items,
-        'cart_total': cart_total
+        'cart_total': cart_total,
+        'order_form': order_form
     }
 
     return render(request, 'cart.html', context)
 
+
+def view_orders(request):
+    if request.user.is_staff:
+        items = []
+        orders = Order.objects.all()
+        print(orders)
+        for order in orders:
+            if order.item_tools.all():
+                items.append(order.item_tools.all())
+            if order.item_parts.all():
+                items.append(order.item_parts.all())
+        for item in items:
+
+            print(item)
+
+        context = {
+            'orders': orders,
+            'items': items
+        }
+        return render(request, 'orders.html', context)
+
+
+def place_order(request):
+    cart = request.session.get('cart', {})
+    order_form = OrderForm(request.POST)
+
+    if order_form.is_valid():
+
+        order = Order(user=request.user)
+        order.address = order_form.cleaned_data['address']
+        order.save()
+        print('eeeee')
+
+        for item_id, item_info in cart.items():
+            if item_info['type'] == 'tool':
+                item = Tool.objects.get(pk=item_info['id'])
+                order.item_tools.add(item)
+            elif item_info['type'] == 'car_part':
+                item = CarPart.objects.get(pk=item_info['id'])
+                order.item_parts.add(item)
+
+        del request.session['cart']
+        return redirect('dashboard')
+
+    return redirect('cart')

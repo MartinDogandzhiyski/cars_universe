@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
+
+
 from cars_universe.web.models.models import Car, validate_image
 
 UserModel = get_user_model()
@@ -70,3 +72,5 @@ class LikeCar(models.Model):
         UserModel,
         on_delete=models.RESTRICT,
     )
+
+

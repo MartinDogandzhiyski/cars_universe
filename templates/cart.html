@@ -61,7 +61,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'tools' %}">Our Shop</a>
-                        <span class="sr-only">(current)</span>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'events' %}">Events</a>
@@ -107,6 +106,11 @@
                             <span class="sr-only">(current)</span>
                         </li>
                     {% endif %}
+                    {% if request.user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'view_orders' %}">Orders</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -129,7 +133,15 @@
 
     </div>
     <!-- Banner Ends Here -->
-
+<div class="best-features about-features">
+    <div class="container">
+            <div class="col-md-6">
+                    <a href="{% url 'parts' %}" class="btn btn-dark">Buy All</a>
+                    <a href="{% url 'clear_cart' %}" class="btn btn-dark">Clear Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="latest-products">
         <div class="container">
             <div class="row">
@@ -151,6 +163,9 @@
                                     <ul class="stars">
                                         <li><h2>Total: {{ item.total_price }}</h2></li>
                                     </ul>
+                                    <div class="col-md-6">
+                                        <a href="{% url 'remove_from_cart' item.item.id %}" class="btn btn-danger">Remove</a>
+                                    </div>
                                     <span></span>
                                 </div>
 
@@ -161,7 +176,23 @@
             </div>
         </div>
     </div>
-
+<div class="col-md-8">
+                <div class="contact-form">
+                    <form id="contact" action="{% url 'place_order' %}" enctype="multipart/form-data" method="post">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                {% csrf_token %}
+                                {{ order_form }}
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="filled-button">Buy All</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>

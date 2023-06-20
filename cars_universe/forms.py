@@ -6,6 +6,10 @@ from cars_universe.web.models.additive_models import Car, Event, Comment
 from cars_universe.web.models.models import Tool, CarPart
 
 
+class OrderForm(forms.Form):
+    address = forms.CharField(max_length=255, widget=forms.TextInput(attrs={'placeholder': 'Enter your address'}))
+
+
 class CreateCarForm(BootstrapFormMixin, forms.ModelForm):
     def __init__(self, user, *args, **kwargs):
         super().__init__(*args, **kwargs)
