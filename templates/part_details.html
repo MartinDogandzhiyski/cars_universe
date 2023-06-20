@@ -153,6 +153,7 @@
                                     <a href="{% url 'edit part' part.id %}" class="btn btn-primary">Edit</a>
                                     <a href="{% url 'delete part' part.id %}" class="btn btn-danger">Delete</a>
                                 {% endif %}
+                                <a href="{% url 'add_to_cart' part.id 'car_part' %}" class="btn btn-danger">Buy</a>
                             </ul>
                                     <ul class="stars">
                                         <li><h2>For {{ part.brand_for }}</h2></li>

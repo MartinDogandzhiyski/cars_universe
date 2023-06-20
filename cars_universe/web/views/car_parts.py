@@ -58,28 +58,31 @@ def delete_part(request, pk):
 
 
 def add_to_cart(request, item_id, item_type):
+    car = False
     if item_type == 'tool':
         item = Tool.objects.get(pk=item_id)
     elif item_type == 'car_part':
         item = CarPart.objects.get(pk=item_id)
+        car = True
     else:
         messages.error(request, 'Invalid item type.')
         return redirect('parts')
 
     cart = request.session.get('cart', {})
-    cart_item = {
-        'id': item.id,
-        'name': item.name,
-        'price': item.price,
-        'type': item_type,
-        'photo': item.photo
-    }
-
+    if car:
+        item_id += 30
     if item_id in cart:
         cart[item_id]['quantity'] += 1
+        print(cart[item_id]['quantity'])
     else:
+        cart_item = {
+            'id': item.id,
+            'name': item.name,
+            'price': item.price,
+            'type': item_type,
+            'quantity': 1
+        }
         cart[item_id] = cart_item
-
     request.session['cart'] = cart
     messages.success(request, 'Item added to cart.')
     if item_type == 'tool':
@@ -105,23 +108,21 @@ def clear_cart(request):
 def cart_page(request):
     cart = request.session.get('cart', {})
     cart_items = []
-    total_price = 0
     for item_id, item_info in cart.items():
         if item_info['type'] == 'tool':
             item = Tool.objects.get(pk=item_info['id'])
         elif item_info['type'] == 'car_part':
             item = CarPart.objects.get(pk=item_info['id'])
         else:
-            # Handle invalid item type
             continue
-
-        total_price += item.price
+        quantity = item_info.get('quantity', 1)
+        total_price = item.price * quantity
         cart_items.append({
             'item': item,
-            #'quantity': item_info['quantity'],
+            'quantity': quantity,
             'total_price': total_price
         })
-    print(cart_items)
+    #print(cart_items)
     cart_total = sum(item['total_price'] for item in cart_items)
 
     context = {
