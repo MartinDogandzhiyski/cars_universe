@@ -61,20 +61,13 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'tools' %}">Our Shop</a>
+                        <span class="sr-only">(current)</span>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'events' %}">Events</a>
-
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'profile details' request.user.id %}">Profile
-                            <span class="sr-only">(current)</span>
-
-                        </a>
                     </li>
                     <li class="nav-item">
-                        <form method="post"></form>
-                        <a class="nav-link" href="{% url 'logout user' %}">Logout
+                        <a class="nav-link" href="{% url 'profile details' request.user.id %}">Profile
 
                         </a>
                     </li>
@@ -84,12 +77,20 @@
 
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <form method="post"></form>
+                        <a class="nav-link" href="{% url 'logout user' %}">Logout
+
+                        </a>
+                    </li>
+
                     {% if request.user.is_staff %}
                         <li class="nav-item">
                             <a class="nav-link " href="{% url 'tool create' %}">Add tool</a>
+
                         </li>
                     {% endif %}
-                    {% if request.user.is_staff %}
+                    {% if request.user.is_superuser %}
                         <li class="nav-item">
                             <a class="nav-link " href="{% url 'event create' %}">Add event</a>
                         </li>
@@ -100,9 +101,10 @@
                         </li>
                     {% endif %}
                     {% if request.user.is_authenticated %}
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <form method="post"></form>
                             <a class="nav-link" href="{% url 'cart' %}">My Cart</a>
+                            <span class="sr-only">(current)</span>
                         </li>
                     {% endif %}
                 </ul>
@@ -118,9 +120,9 @@
         <div class="carousel-item active">
             <img class="d-block w-100" src="{% static 'assets/images/3-dash.jpg' %}" alt="First slide">
             <div class="carousel-caption d-none d-md-block font">
-                <h3>All</h3>
+                <h3>My Shopping</h3>
                 <hr></hr>
-                <p class="font2">Cars...</p>
+                <p class="font2">Cart...</p>
             </div>
         </div>
 
@@ -128,67 +130,38 @@
     </div>
     <!-- Banner Ends Here -->
 
-    <div class="latest-products">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading">
-                        <h2>My Cars</h2>
-
-                    </div>
-                </div>
-                {% for car in all_cars %}
-                    {% if car.user_id == request.user.id %}
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <a href="{% url 'car details' car.id %}"><img src="{{ car.photo.url }}" width="150" height="250" alt=""></a>
-                                <div class="down-content">
-                                    <a href="{% url 'car details' car.id %}"><h4>Project name: {{ car.name }}</h4></a>
-                                    <h6>{{ car.type }}</h6>
-                                    <p>{{ car.description }}</p>
-                                    <ul class="stars">
-                                        <p>{{ car.made_date }}</p>
-                                    </ul>
-                                    <span>Owner: user</span>
-                                </div>
-                            </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
 <div class="latest-products">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Other's Cars</h2>
+                        <h2>All my items</h2>
 
                     </div>
                 </div>
-                {% for car in all_cars %}
-                    {% if car.user_id != request.user.id %}
+                {% for item in cart_items %}
                         <div class="col-md-4">
                             <div class="product-item">
-                                <a href="{% url 'car details' car.id %}"><img src="{{ car.photo.url }}" width="150" height="250" alt=""></a>
+                                <a href=""><img src="{{ item.item.photo.url }}" width="150"
+                                                                                height="250" alt=""></a>
                                 <div class="down-content">
-                                    <a href="{% url 'car details' car.id %}"><h4>Project name: {{ car.name }}</h4></a>
-                                    <h6>{{ car.type }}</h6>
-                                    <p>{{ car.description }}</p>
+                                    <a href=""><h4>{{ item.item.name }}</h4></a>
+                                    <h6>{{ item.item.price }} lv</h6>
+                                    <p>{{ item.quantity }}</p>
                                     <ul class="stars">
-                                        <p>{{ car.made_date }}</p>
+                                        <li><h2>Total: {{ item.total_price }}</h2></li>
                                     </ul>
-                                    <span>Owner: </span>
+                                    <span></span>
                                 </div>
+
                             </div>
+
                         </div>
-                    {% endif %}
                 {% endfor %}
             </div>
         </div>
     </div>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
@@ -218,3 +191,4 @@
 </body>
 
 </html>
+

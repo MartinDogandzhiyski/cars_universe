@@ -93,6 +93,12 @@
                             <a class="nav-link " href="{% url 'part create' %}">Add part</a>
                         </li>
                     {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <li class="nav-item">
+                            <form method="post"></form>
+                            <a class="nav-link" href="{% url 'cart' %}">My Cart</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -147,6 +153,7 @@
                                     <a href="{% url 'edit tool' tool.id %}" class="btn btn-primary">Edit</a>
                                     <a href="{% url 'delete tool' tool.id %}" class="btn btn-danger">Delete</a>
                                 {% endif %}
+                                <a href="{% url 'add_to_cart' tool.id 'tool' %}" class="btn btn-danger">Buy</a>
                             </ul>
                             <span>Brand: {{ tool.brand }}</span>
                         </div>

@@ -3,7 +3,7 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.contrib.auth import get_user_model
 
-from cars_universe.accounts.models import Cart
+from cars_universe.accounts.models import Cart, CarsUniverseUser
 
 UserModel = get_user_model()
 
@@ -139,8 +139,5 @@ class CarPart(models.Model):
     price = models.IntegerField(
         validators=[MinValueValidator(1)],
     )
-
-
-
 
 

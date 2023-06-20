@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/cars_universe/accounts/migrations/0003_create_cart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/cars_universe_db.mGfqOQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca547ebc-323c-4893-a902-a5a8490f1247/storage_v2/_src_/database/cars_universe_db.mGfqOQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/generic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/car_parts.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/car_parts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tool_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tool_details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +33,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -232,21 +245,8 @@
       <workItem from="1686675884724" duration="11000" />
       <workItem from="1686936440674" duration="72000" />
       <workItem from="1687103980902" duration="5958000" />
-      <workItem from="1687167165174" duration="19075000" />
-    </task>
-    <task id="LOCAL-00002" summary="update">
-      <created>1668187388819</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1668187388819</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update">
-      <created>1668198822590</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1668198822590</updated>
+      <workItem from="1687167165174" duration="22151000" />
+      <workItem from="1687256190890" duration="6898000" />
     </task>
     <task id="LOCAL-00004" summary="update">
       <created>1668367404079</created>
@@ -577,7 +577,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687183035856</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="update working comments">
+      <created>1687191534055</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1687191534055</updated>
+    </task>
+    <task id="LOCAL-00052" summary="update">
+      <created>1687199259838</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1687199259838</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,6 +611,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add some tests and exceptions handlings" />
     <MESSAGE value="added admin's custom options" />
+    <MESSAGE value="update working comments" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>

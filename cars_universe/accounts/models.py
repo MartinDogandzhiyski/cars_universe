@@ -106,11 +106,15 @@ class Cart(models.Model):
         primary_key=True,
     )
 
-    items = models.ManyToManyField(
-        Product,
-        related_name='carts',
+    item_type = models.TextField(
+        null=True,
+        blank=True
     )
 
+    item_id = models.IntegerField(
+        null=True,
+        blank=True
+    )
     def __str__(self):
         return f"Cart for {self.user.username}"
 

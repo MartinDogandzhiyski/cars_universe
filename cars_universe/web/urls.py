@@ -1,6 +1,6 @@
 from django.urls import path
-
-from cars_universe.web.views.car_parts import create_part, delete_part, edit_part
+from . import views
+from cars_universe.web.views.car_parts import create_part, delete_part, edit_part, add_to_cart, cart_page
 from cars_universe.web.views.cars import create_event, delete_event, edit_event, CreateCarView, edit_car, delete_car, \
     like_event, like_car
 
@@ -35,5 +35,7 @@ urlpatterns = (
     path('part/details/<int:pk>/', PartDetailsView.as_view(), name='part details'),
     path('about/', about, name='about'),
     path('event/details/<int:event_id>/add_comment/', add_comment, name='add_comment'),
+    path('add-to-cart/<int:item_id>/<str:item_type>/', add_to_cart, name='add_to_cart'),
+    path('cart/', cart_page, name='cart'),
 
 )
