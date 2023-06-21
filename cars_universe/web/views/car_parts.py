@@ -146,13 +146,14 @@ def view_orders(request):
         orders = Order.objects.all()
        # print(orders)
         for order in orders:
-            items = []
             items_dict[order.id] = []
             if order.item_tools.all():
+                items = []
                 item_tools = order.item_tools.filter(order__id=order.id)
                 items.append(item_tools)
                 items_dict[order.id].append(items)
             if order.item_parts.all():
+                items = []
                 item_parts = order.item_parts.filter(order__id=order.id)
                 items.append(item_parts)
                 items_dict[order.id].append(items)
