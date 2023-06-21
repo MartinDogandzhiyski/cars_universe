@@ -61,11 +61,15 @@
             <td>{{ order.created_at }}</td>
             <td>
                 <ul>
-                    {% for item in items %}
-                        {% for it in item %}
-
-                                <li>{{ it.name }} ({{ it.id }})</li>
-
+                    {% for order_id, items in items_dict.items %}
+                        {% for item in items %}
+                            {% for it in item %}
+                                {% for i in it %}
+                                    {% if order_id == order.id %}
+                                        <li>{{ i.name }} {{ i.price }}lv id:({{ i.id }})</li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
                         {% endfor %}
                     {% endfor %}
                 </ul>

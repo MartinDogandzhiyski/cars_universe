@@ -141,21 +141,25 @@ def cart_page(request):
 
 def view_orders(request):
     if request.user.is_staff:
+        items_dict = {}
         items = []
         orders = Order.objects.all()
-        print(orders)
+       # print(orders)
         for order in orders:
+            items = []
+            items_dict[order.id] = []
             if order.item_tools.all():
-                items.append(order.item_tools.all())
+                item_tools = order.item_tools.filter(order__id=order.id)
+                items.append(item_tools)
+                items_dict[order.id].append(items)
             if order.item_parts.all():
-                items.append(order.item_parts.all())
-        for item in items:
-
-            print(item)
-
+                item_parts = order.item_parts.filter(order__id=order.id)
+                items.append(item_parts)
+                items_dict[order.id].append(items)
+        print(items_dict)
         context = {
             'orders': orders,
-            'items': items
+            'items_dict': items_dict
         }
         return render(request, 'orders.html', context)
 
