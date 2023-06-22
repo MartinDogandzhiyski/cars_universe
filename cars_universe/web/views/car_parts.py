@@ -1,7 +1,6 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages
-# from cars_universe.accounts.models import CartItem
-from cars_universe.forms import CreateToolForm, EditToolForm, DeleteToolForm, CreatePartForm, EditPartForm, \
+from cars_universe.forms import CreatePartForm, EditPartForm, \
     DeletePartForm, OrderForm
 from cars_universe.web.models.models import CarPart, Tool, Car, Order
 
