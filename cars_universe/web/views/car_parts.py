@@ -157,7 +157,7 @@ def view_orders(request):
                 item_parts = order.item_parts.filter(order__id=order.id)
                 items.append(item_parts)
                 items_dict[order.id].append(items)
-        print(items_dict)
+        #print(items_dict)
         context = {
             'orders': orders,
             'items_dict': items_dict
