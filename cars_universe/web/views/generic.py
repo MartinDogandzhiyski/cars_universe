@@ -1,4 +1,4 @@
-from urllib import request
+
 
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic as views
@@ -7,7 +7,7 @@ from cars_universe.accounts.models import CarsUniverseUser, Profile
 from cars_universe.forms import CommentForm
 from cars_universe.web.models.additive_models import Event, Comment, Like
 from cars_universe.web.models.models import Car, Tool, CarPart
-from cars_universe.web.views.cars import event_is_liked_by_user, event_likes_count
+
 
 
 def about(request):
