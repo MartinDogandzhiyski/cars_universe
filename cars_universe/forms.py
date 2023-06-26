@@ -85,7 +85,14 @@ class CreateEventForm(BootstrapFormMixin, forms.ModelForm):
 class EditEventForm(forms.ModelForm):
     class Meta:
         model = Event
-        fields = '__all__'
+        fields = ('name', 'cars_brand', 'photo', 'description', 'address', 'date')
+        labels = {
+            'name': 'Name',
+            'cars_brand': 'Cars Brand',
+            'picture': 'Event photo',
+            'address': 'Address',
+            'date': 'Date',
+        }
 
 
 class DeleteEventForm(forms.ModelForm):

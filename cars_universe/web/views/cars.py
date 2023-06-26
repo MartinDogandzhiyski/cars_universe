@@ -102,22 +102,6 @@ def like_car(request, pk):
     return redirect('car details', pk)
 
 
-def event_is_liked_by_user(request, event):
-    liked = Like.objects.filter(event_id=event.pk, user_id=request.user.pk)
-
-    event.liked_by_user = True if liked else False
-
-    return event
-
-
-def car_is_liked_by_user(request, car):
-    liked = LikeCar.objects.filter(car_id=car.pk, user_id=request.user.pk)
-
-    car.liked_by_user = True if liked else False
-
-    return car
-
-
 def create_event(request):
     if request.user.is_staff:
         if request.method == 'POST':
