@@ -21,6 +21,7 @@ class Car(models.Model):
     VW = "Vw"
     OPEL = "Opel"
     FORD = "Ford"
+
     OTHER = "Other"
     TYPES = [(x, x) for x in (AUDI, BMW, VW, OPEL, FORD, OTHER)]
     # Fields(Columns)
