@@ -44,6 +44,7 @@ def delete_car(request, pk):
     if request.user.is_authenticated:
         car = Car.objects.get(pk=pk)
         if request.method == 'POST':
+            LikeCar.objects.filter(car_id=car.id).delete()
             form = DeleteCarForm(request.POST, instance=car)
             if form.is_valid():
                 form.save()
@@ -141,6 +142,7 @@ def delete_event(request, pk):
     if request.user.is_staff:
         event = Event.objects.get(pk=pk)
         if request.method == 'POST':
+            Like.objects.filter(event_id=event.id).delete()
             form = DeleteEventForm(request.POST, instance=event)
             if form.is_valid():
                 form.save()
