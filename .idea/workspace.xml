@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="up">
+    <list default="true" id="20b731fa-0300-4f7e-95e3-8ee852620037" name="Changes" comment="delete functionality repair">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_universe/web/views/cars.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars_universe/web/views/cars.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +67,11 @@
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\strypes_lab\cars_universe\staticfiles" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\staticfiles\assets\images" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe" />
       <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe\web\models" />
-      <recent name="D:\SoftUni_exercise\python_web\python_web_basics\cars_universe\cars_universe\web" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.cars_universe">
@@ -241,14 +240,9 @@
       <workItem from="1687621425052" duration="103000" />
       <workItem from="1687702006527" duration="8866000" />
       <workItem from="1687806046890" duration="85000" />
-      <workItem from="1687880545452" duration="630000" />
-    </task>
-    <task id="LOCAL-00015" summary="update">
-      <created>1668938647769</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1668938647769</updated>
+      <workItem from="1687880545452" duration="963000" />
+      <workItem from="1687881553186" duration="4000" />
+      <workItem from="1688459126378" duration="5540000" />
     </task>
     <task id="LOCAL-00016" summary="update">
       <created>1668942270463</created>
@@ -586,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687801709084</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="delete functionality repair">
+      <created>1687881441627</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1687881441627</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +612,8 @@
     <MESSAGE value="fixed cart bug" />
     <MESSAGE value="some tests" />
     <MESSAGE value="up" />
-    <option name="LAST_COMMIT_MESSAGE" value="up" />
+    <MESSAGE value="delete functionality repair" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete functionality repair" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cars_universe$Test__cars_universe_web_tests.coverage" NAME="Test: cars_universe.web.tests Coverage Results" MODIFIED="1687434917124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
