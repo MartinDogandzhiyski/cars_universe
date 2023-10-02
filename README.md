@@ -1,0 +1,12 @@
+<img width="607" alt="Screenshot 2023-10-02 113354" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/0e129907-2a42-415b-8053-0b8192535f7d">
+<img width="605" alt="Screenshot 2023-10-02 113512" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/bdfe7663-8f45-4b67-aa44-5406f9f928df">
+<img width="606" alt="Screenshot 2023-10-02 113540" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/98e5cee3-0c41-4e26-9c9c-b7809178b2e2">
+<img width="547" alt="Screenshot 2023-10-02 113619" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/576d5018-77a7-4878-aa41-cc50415ed658">
+<img width="1111" alt="Screenshot 2023-10-02 113729" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/6d3a5105-ee90-442c-a782-d4e81aefff0f">
+<img width="1111" alt="Screenshot 2023-10-02 113749" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/88cd9e0e-2972-486c-92eb-96cf94d86bbb">
+<img width="1112" alt="Screenshot 2023-10-02 113806" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/de3e88d8-c252-432f-bd72-e82eb550af4f">
+<img width="1106" alt="Screenshot 2023-10-02 113825" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/47873e95-e617-49bb-8398-ef38997c1e29">
+<img width="1112" alt="Screenshot 2023-10-02 113846" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/022b09ad-dd9b-4f02-80d9-6c4eac90148c">
+<img width="1112" alt="Screenshot 2023-10-02 113902" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/81137236-0a07-422b-b5b5-87f038e908be">
+<img width="1112" alt="Screenshot 2023-10-02 113918" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/b560d958-04f3-4641-a644-5ec7afd36492">
+<img width="1113" alt="Screenshot 2023-10-02 113937" src="https://github.com/MartinDogandzhiyski/cars_universe/assets/94994594/9665181d-b9ad-4ba5-b24e-5dd50673a8d1">
